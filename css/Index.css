@@ -1,0 +1,413 @@
+:root {
+    --color-yellow: #ffc107;
+    --color-yellow-hover: #ffca2c;
+    --color-gray-900: #111111;
+    --color-gray-800: #1f1f1f;
+    --color-gray-700: #2d2d2d;
+    --color-gray-600: #4a4a4a;
+    --color-gray-500: #666666;
+    --color-gray-400: #888888;
+    --color-white: #ffffff;
+    --transition-speed: 0.3s;
+}
+
+/* General Styles */
+#dynamicContent {
+    padding: 2rem 0;
+}
+
+.section {
+    margin-bottom: 5rem;
+    opacity: 0;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section:not(.visible) {
+    transform: translateY(30px);
+}
+
+/* Section Titles */
+.section-title {
+    color: var(--color-yellow);
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    margin-left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-yellow);
+    transition: width 0.3s ease;
+}
+
+.section-title:hover::after {
+    width: 90%;
+}
+
+.section-title.text-center {
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+}
+
+/* Origin Section */
+.origin-section {
+    position: relative;
+    background-color: var(--color-gray-900);
+    border-radius: 1rem;
+    padding: 3rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 1.4%;
+    margin-bottom: 5%;
+}
+
+.origin-content {
+    flex: 1;
+    position: relative;
+    z-index: 2;
+}
+
+.origin-illustration {
+    width: 400px;
+    height: auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Link Styles */
+.link-personalizado {
+    color: var(--color-yellow);
+    text-decoration: none;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.link-personalizado:hover {
+    color: var(--color-yellow-hover);
+}
+
+.link-personalizado::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--color-yellow);
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+.link-personalizado:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Concept Section */
+.concept-section {
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+    height: auto;
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 5.5%;
+}
+
+.concept-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.4);
+    transition: transform 0.5s ease-out;
+    transform: scale(1.05);
+    z-index: 1;
+}
+
+.concept-content {
+    margin-top: 3%;
+    margin-bottom: 3%;
+    position: relative;
+    z-index: 2;
+    padding: 3rem;
+    width: 100%;
+    transform: translateX(-30px);
+    opacity: 0;
+    transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+.concept-content.visible {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* Features Grid */
+
+.features-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: transparent;
+    padding: 3rem;
+    margin-bottom: 4%;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    background-color: var(--color-gray-900);
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform var(--transition-speed),
+        box-shadow var(--transition-speed),
+        border var(--transition-speed);
+    border: 1px solid transparent;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(255, 193, 7, 0.12);
+    border-color: var(--color-yellow);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    color: var(--color-yellow);
+    margin-bottom: 1.5rem;
+}
+
+.feature-card h3 {
+    color: var(--color-yellow);
+    margin-bottom: 1rem;
+}
+
+/* Wrapper da secção */
+.audience-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem;
+}
+
+/* Wrapper (mantém max-width, margem, padding e fundo transparente) */
+.audience-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: transparent;
+    padding: 3rem;
+    text-align: justify;
+    margin-bottom: 5.5%;
+}
+
+/* Flex interno entre ícone e texto */
+.audience-columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/* Caixa genérica para ambas as colunas */
+.audience-box {
+    background-color: var(--color-gray-900);
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+/* Caixa do ícone: ocupa espaço fixo */
+.audience-icon-box {
+    flex: 0 0 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo do ícone */
+.audience-icon {
+    font-size: 4rem;
+    color: var(--color-yellow);
+}
+
+/* Caixa do texto: ocupa todo o resto */
+.audience-text-box {
+    flex: 1;
+    color: var(--color-white);
+    line-height: 1.6;
+}
+
+/* Potential Section */
+.potential-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--color-gray-900);
+    border-radius: 1rem;
+    padding: 3rem;
+    margin-bottom: 4%;
+}
+
+.potential-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.potential-card {
+    padding: 2rem;
+    border-radius: 0.5rem;
+    background-color: var(--color-gray-700);
+    transition: transform var(--transition-speed);
+}
+
+.potential-card:hover {
+    transform: translateY(-5px);
+}
+
+.potential-icon {
+    font-size: 2.5rem;
+    color: var(--color-yellow);
+    margin-bottom: 1rem;
+}
+
+/* Inspirations Grid */
+.inspirations-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: transparent;
+    padding: 3rem;
+}
+
+.inspirations-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.inspiration-item {
+    position: relative;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    background-color: var(--color-gray-900);
+    aspect-ratio: 16/9;
+    transition: transform var(--transition-speed);
+}
+
+.inspiration-item:hover {
+    transform: scale(1.05);
+}
+
+.inspiration-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-speed);
+}
+
+.inspiration-item:hover .inspiration-img {
+    transform: scale(1.1);
+}
+
+.inspiration-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    padding: 1rem;
+}
+
+.inspiration-name {
+    color: var(--color-yellow);
+    margin: 0;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .origin-section {
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .origin-illustration {
+        width: 100%;
+        max-width: 400px;
+        margin: 2rem auto 0;
+    }
+
+    .inspirations-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Responsivo: empilha as colunas em telas menores */
+@media (max-width: 576px) {
+    .audience-section {
+        padding: 1.25rem 0.75rem;
+        margin-bottom: 4%;
+    }
+
+    .audience-box {
+        padding: 1.25rem;
+        border-radius: 0.75rem;
+    }
+
+    .audience-icon-box {
+        min-height: 120px;
+    }
+
+    .audience-icon {
+        font-size: 3rem;
+    }
+
+    .audience-text-box {
+        font-size: 0.95rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .inspirations-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        margin-bottom: 3rem;
+    }
+}

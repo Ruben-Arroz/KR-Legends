@@ -1,0 +1,317 @@
+ @media (max-width:320px) {
+     body {
+         padding-top: 80px
+     }
+
+     #form_personalised {
+         padding: 1rem
+     }
+
+     .form-section {
+         padding: 1rem;
+         margin-bottom: 1.5rem
+     }
+
+     .perfil-avatar {
+         width: 120px;
+         height: 120px
+     }
+
+     .perfil-banner {
+         height: 150px
+     }
+
+     .buttons-container {
+         flex-direction: column;
+         padding: 1rem;
+         gap: .75rem
+     }
+
+     .btn-submit, .btn-cancel {
+         width: 100%;
+         padding: .75rem 1rem;
+         font-size: .9rem
+     }
+
+     .form-label {
+         font-size: .9rem
+     }
+
+     .form-control,
+     .form-select,
+     #roblox_username {
+         padding: .75rem;
+         font-size: .9rem
+     }
+
+     h2 {
+         font-size: 1.5rem
+     }
+
+     .card-title {
+         font-size: 1.1rem
+     }
+ }
+
+ @media (min-width:321px) and (max-width:576px) {
+     body {
+         padding-top: 85px
+     }
+
+     #form_personalised {
+         padding: 1.25rem
+     }
+
+     .form-section {
+         padding: 1.25rem
+     }
+
+     .perfil-avatar {
+         width: 140px;
+         height: 140px
+     }
+
+     .perfil-banner {
+         height: 180px
+     }
+
+     .buttons-container {
+         flex-direction: column;
+         gap: .75rem;
+         padding: 1.25rem
+     }
+
+     .btn-submit, .btn-cancel {
+         width: 100%
+     }
+
+     h2 {
+         font-size: 1.7rem
+     }
+ }
+
+ @media (min-width:577px) and (max-width:768px) {
+     #form_personalised {
+         padding: 1.5rem
+     }
+
+     .form-section {
+         padding: 1.75rem
+     }
+
+     .perfil-avatar {
+         width: 160px;
+         height: 160px
+     }
+
+     .perfil-banner {
+         height: 200px
+     }
+
+     .buttons-container {
+         padding: 1.25rem
+     }
+
+     .card {
+         margin-bottom: 1.5rem
+     }
+ }
+
+ @media (min-width:769px) and (max-width:992px) {
+     .mt-5 {
+         margin-top: 13% !important
+     }
+
+     #form_personalised {
+         padding: 1.75rem
+     }
+
+     .form-section {
+         padding: 2rem
+     }
+
+     .perfil-banner {
+         height: 220px
+     }
+
+     .form-row {
+         gap: 15px
+     }
+ }
+
+ @media (min-width:993px) and (max-width:1200px) {
+     .mt-5 {
+         margin-top: 12% !important
+     }
+
+     #form_personalised {
+         padding: 2rem
+     }
+
+     .form-section {
+         padding: 2.25rem
+     }
+ }
+
+ @media (min-width:1201px) and (max-width:1400px) {
+     .mt-5 {
+         margin-top: 7% !important
+     }
+
+     .form-section {
+         padding: 2.5rem
+     }
+ }
+
+ @media (min-width:1401px) {
+     .mt-5 {
+         margin-top: 7% !important
+     }
+
+     .form-section {
+         padding: 3rem
+     }
+
+     .perfil-banner {
+         height: 300px
+     }
+
+     .form-control,
+     .form-select,
+     #roblox_username {
+         padding: 1rem 1.2rem;
+         font-size: 1.1rem
+     }
+
+     .btn-submit, .btn-cancel {
+         padding: 1rem 2.5rem;
+         font-size: 1.1rem
+     }
+
+     h2 {
+         font-size: 2.5rem
+     }
+ }
+
+ @media (max-height:600px) and (orientation:landscape) {
+     .mt-5 {
+         margin-top: 7% !important
+     }
+
+     body {
+         padding-top: 85px
+     }
+
+     .buttons-container {
+         position: relative;
+         margin-top: 2rem
+     }
+
+     .perfil-avatar {
+         width: 120px;
+         height: 120px
+     }
+
+     .perfil-banner {
+         height: 180px
+     }
+
+     #form_personalised {
+         padding: 1.5rem
+     }
+ }
+
+ @media (min-width:2560px) {
+     .mt-5 {
+         margin-top: 7% !important
+     }
+
+     #form_personalised {
+         padding: 3rem
+     }
+
+     .form-section {
+         padding: 4rem
+     }
+
+     .perfil-avatar {
+         width: 240px;
+         height: 240px
+     }
+
+     .perfil-banner {
+         height: 400px
+     }
+
+     .form-control,
+     .form-select,
+     #roblox_username {
+         padding: 1.5rem;
+         font-size: 1.2rem
+     }
+
+     .btn-submit, .btn-cancel {
+         padding: 1.5rem 3rem;
+         font-size: 1.2rem
+     }
+
+     h2 {
+         font-size: 3rem;
+         margin-bottom: 2rem
+     }
+
+     .form-label {
+         font-size: 1.3rem
+     }
+ }
+
+ @media (min-width:768px) {
+     .form-grid {
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         gap: 20px
+     }
+
+     .form-grid-full {
+         grid-column: span 2
+     }
+ }
+
+ @media (max-width:767px) {
+     .col-md-6 {
+         width: 100%
+     }
+ }
+
+ @media (max-width:768px) {
+
+     .perfil-avatar,
+     .perfil-banner {
+         margin-bottom: 1rem
+     }
+
+     .custom-file-upload {
+         padding: .75rem
+     }
+
+     .card-header {
+         padding: .75rem 1rem
+     }
+
+     .card-body {
+         padding: 1rem
+     }
+ }
+
+ @media (min-width:576px) and (max-width:992px) {
+     .buttons-container {
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between
+     }
+
+     .btn-submit, .btn-cancel {
+         flex: 0 0 48%;
+         max-width: 48%
+     }
+ }

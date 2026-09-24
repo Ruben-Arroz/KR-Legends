@@ -1,0 +1,665 @@
+/* Estilos para a página de créditos - KR Legends */
+
+:root {
+    --color-yellow: #ffc107;
+    --color-yellow-hover: #ffca2c;
+    --color-gray-900: #111111;
+    --color-gray-800: #1f1f1f;
+    --color-gray-700: #2d2d2d;
+    --color-gray-600: #4a4a4a;
+    --color-gray-500: #666666;
+    --color-gray-400: #888888;
+    --color-white: #ffffff;
+    --transition-speed: 0.3s;
+}
+
+/* Estilos gerais para a página de créditos */
+.creditos-section {
+    padding: 6rem 0;
+    position: relative;
+    overflow: hidden;
+    background-color: black;
+}
+
+/* Separador visual entre secções */
+.creditos-section:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 1200px;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(255, 193, 7, 0) 0%, rgba(255, 193, 7, 0.3) 50%, rgba(255, 193, 7, 0) 100%);
+}
+
+/* Background elements */
+.creditos-section::before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(255, 193, 7, 0.03) 0%, rgba(255, 193, 7, 0) 70%);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.creditos-section:nth-child(odd)::before {
+    top: -100px;
+    right: -100px;
+}
+
+.creditos-section:nth-child(even)::before {
+    bottom: -100px;
+    left: -100px;
+}
+
+/* Títulos de seção */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3.5rem;
+    color: var(--color-yellow);
+    position: relative;
+    display: inline-block;
+    padding-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.section-title::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--color-yellow);
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: var(--color-yellow);
+    transition: width 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.section-title.animate::after {
+    width: 100%;
+}
+
+/* Container para melhor organização visual */
+.section-container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Cartões de membros */
+.membro-card {
+    background: linear-gradient(145deg, var(--color-gray-900), var(--color-gray-800));
+    border-radius: 12px;
+    padding: 2.5rem;
+    height: 100%;
+    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.membro-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, transparent 50%, rgba(255, 193, 7, 0.1) 50%);
+    border-radius: 0 0 12px 0;
+    transition: all 0.3s ease;
+}
+
+.membro-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 193, 7, 0.3);
+}
+
+.membro-card:hover::after {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, transparent 50%, rgba(255, 193, 7, 0.15) 50%);
+}
+
+.membro-nome {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-yellow);
+    margin-bottom: 0.8rem;
+    position: relative;
+    display: inline-block;
+}
+
+.membro-nome::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background-color: var(--color-yellow);
+    transition: width 0.3s ease;
+}
+
+.membro-card:hover .membro-nome::after {
+    width: 100%;
+}
+
+.membro-titulo {
+    font-size: 1rem;
+    color: var(--color-gray-400);
+    margin-bottom: 1.5rem;
+    font-style: italic;
+    letter-spacing: 0.5px;
+    position: relative;
+    padding-left: 15px;
+}
+
+.membro-titulo::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background-color: var(--color-yellow);
+    border-radius: 50%;
+}
+
+.membro-descricao {
+    color: var(--color-white);
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+/* Novos estilos para o sistema de abas */
+.dev-tabs {
+    display: flex;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 193, 7, 0.2);
+    padding-bottom: 5px;
+}
+
+.dev-tab-btn {
+    background: transparent;
+    border: none;
+    color: var(--color-gray-400);
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 0.5rem 1.2rem;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-right: 1rem;
+    overflow: hidden;
+}
+
+.dev-tab-btn::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: var(--color-yellow);
+    transition: width 0.3s ease;
+}
+
+.dev-tab-btn:hover {
+    color: var(--color-yellow-hover);
+}
+
+.dev-tab-btn.active {
+    color: var(--color-yellow);
+}
+
+.dev-tab-btn.active::after {
+    width: 100%;
+}
+
+.dev-tab-btn:focus {
+    outline: none;
+}
+
+.dev-tab-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    background-color: rgba(255, 193, 7, 0.1);
+    border-radius: 50%;
+    transition: all 0.5s ease;
+    z-index: -1;
+}
+
+.dev-tab-btn:hover::before {
+    width: 70px;
+    height: 70px;
+}
+
+.dev-content {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.dev-content.active {
+    display: block;
+    opacity: 1;
+    animation: fadeContentIn 0.5s forwards;
+}
+
+@keyframes fadeContentIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Cartões de instituições */
+.instituicao-card {
+    background: linear-gradient(145deg, var(--color-gray-900), var(--color-gray-800));
+    border-radius: 12px;
+    padding: 2.5rem;
+    height: 100%;
+    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.instituicao-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-yellow), transparent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.instituicao-card:hover::before {
+    transform: scaleX(1);
+}
+
+.instituicao-card::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 193, 7, 0.1);
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.instituicao-card:hover::after {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+.instituicao-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.instituicao-nome {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-yellow);
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+.instituicao-nome::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background-color: var(--color-yellow);
+    transition: width 0.3s ease;
+}
+
+.instituicao-card:hover .instituicao-nome::after {
+    width: 100%;
+}
+
+.instituicao-descricao {
+    color: var(--color-white);
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+/* ======= Grid de Cartões de Agradecimentos ======= */
+.agradecimentos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* ======= Cartão de Agradecimento ======= */
+.agradecimento-card {
+  background: linear-gradient(145deg, var(--color-gray-900), var(--color-gray-800));
+  border-radius: 12px;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transform: translateY(20px);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* Ativa o slide-up + fade-in */
+.agradecimento-card.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Ícone decorativo no cartão */
+.agradecimento-card .card-icon {
+  font-size: 1.5rem;
+  color: var(--color-yellow);
+  margin-bottom: 0.5rem;
+}
+
+/* Título do cartão */
+.agradecimento-card .card-title {
+  font-size: 1.25rem;
+  color: var(--color-white);
+  margin-bottom: 0.75rem;
+  position: relative;
+}
+
+.agradecimento-card .card-title::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: var(--color-yellow);
+  margin-top: 0.5rem;
+  transition: width 0.3s ease;
+}
+
+.agradecimento-card:hover .card-title::after {
+  width: 60px;
+}
+
+/* Texto descritivo */
+.agradecimento-card .card-text {
+  color: var(--color-gray-400);
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Hover effect geral no cartão */
+.agradecimento-card:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Mensagem Final */
+.mensagem-final {
+    text-align: center;
+    padding: 5rem 0;
+    background-color: black;
+    position: relative;
+}
+
+.mensagem-final::before,
+.mensagem-final::after {
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(90deg, transparent, var(--color-yellow), transparent);
+}
+
+.mensagem-final::before {
+    top: 40px;
+}
+
+.mensagem-final::after {
+    bottom: 40px;
+}
+
+.mensagem-texto {
+    font-size: 1.3rem;
+    line-height: 1.9;
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--color-white);
+    position: relative;
+    padding: 0 20px;
+}
+
+.mensagem-texto::before,
+.mensagem-texto::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 25px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+}
+
+.mensagem-texto::before {
+    top: -15px;
+    left: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ffc107'%3E%3Cpath d='M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z'/%3E%3C/svg%3E");
+}
+
+.mensagem-texto::after {
+    bottom: -15px;
+    right: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ffc107'%3E%3Cpath d='M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.571 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z'/%3E%3C/svg%3E");
+}
+
+/* Racing-inspired decorative elements */
+.racing-stripe {
+    position: absolute;
+    height: 30px;
+    background-color: rgba(255, 193, 7, 0.05);
+    z-index: 0;
+}
+
+.racing-stripe-1 {
+    top: 30%;
+    left: 0;
+    width: 100%;
+    transform: skewY(-2deg);
+}
+
+.racing-stripe-2 {
+    bottom: 20%;
+    left: 0;
+    width: 100%;
+    transform: skewY(2deg);
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+
+.slide-in-left {
+    animation: slideInLeft 1s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+
+.slide-in-right {
+    animation: slideInRight 1s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+
+.delay-1 {
+    animation-delay: 0.2s;
+}
+
+.delay-2 {
+    animation-delay: 0.4s;
+}
+
+.delay-3 {
+    animation-delay: 0.6s;
+}
+
+.delay-4 {
+    animation-delay: 0.8s;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+    .creditos-section {
+        padding: 5rem 0;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+        margin-bottom: 3rem;
+    }
+
+    .racing-stripe {
+        height: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .creditos-section {
+        padding: 4rem 0;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .membro-card,
+    .instituicao-card {
+        padding: 2rem;
+    }
+
+    .agradecimentos-container {
+        padding: 2.5rem;
+    }
+
+    .membro-nome,
+    .instituicao-nome {
+        font-size: 1.4rem;
+    }
+
+    .mensagem-texto {
+        font-size: 1.2rem;
+        line-height: 1.8;
+    }
+}
+
+@media (max-width: 576px) {
+    .creditos-section {
+        padding: 3rem 0;
+    }
+
+    .section-title {
+        font-size: 1.7rem;
+        margin-bottom: 2rem;
+    }
+
+    .membro-card,
+    .instituicao-card {
+        padding: 1.5rem;
+    }
+
+    .agradecimentos-container {
+        padding: 1.8rem;
+    }
+
+    .agradecimentos-container::after {
+        font-size: 8rem;
+        top: -15px;
+        right: 15px;
+    }
+
+    .membro-nome,
+    .instituicao-nome {
+        font-size: 1.3rem;
+    }
+
+    .mensagem-texto {
+        font-size: 1.1rem;
+        line-height: 1.7;
+    }
+}

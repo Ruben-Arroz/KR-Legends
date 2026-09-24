@@ -1,0 +1,286 @@
+/*--------------------------------------------------------------
+01. Estrutura Base do Produto (Grelha Principal)
+--------------------------------------------------------------*/
+.product-detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    background: var(--color-gray-900);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    padding: 2rem;
+}
+
+/*--------------------------------------------------------------
+02. Galeria de Imagens (Miniaturas + Imagem Principal)
+--------------------------------------------------------------*/
+.product-gallery {
+    display: flex;
+    gap: 1rem;
+}
+
+.thumbnails {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.thumbnail-btn {
+    width: 70px;
+    height: 70px;
+    border: 2px solid transparent;
+    border-radius: 0.25rem;
+    overflow: hidden;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.thumbnail-btn:hover {
+    border-color: rgba(255, 193, 7, 0.5);
+}
+
+.thumbnail-btn.active {
+    border-color: var(--color-yellow);
+}
+
+.thumbnail-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main-image {
+    flex: 1;
+    background: var(--color-gray-800);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    align-items: center;
+}
+
+.main-image img {
+    width: 100%;
+    height: 700px;
+    max-width: 300%;
+    max-height: 700px;
+    object-fit: contain;
+    object-position: center center;
+}
+
+/*--------------------------------------------------------------
+03. Informação do Produto
+--------------------------------------------------------------*/
+.product-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.product-model {
+    font-size: 1.5rem;
+    color: var(--color-yellow);
+}
+
+.product-name {
+    font-size: 1.25rem;
+    color: var(--color-white);
+}
+
+.price-date {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-price {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--color-yellow);
+}
+
+.product-date {
+    color: var(--color-gray-400);
+    font-size: 0.875rem;
+}
+
+/*--------------------------------------------------------------
+04. Detalhes Técnicos e Descrição
+--------------------------------------------------------------*/
+.product-details {
+    border-top: 1px solid var(--color-gray-700);
+    border-bottom: 1px solid var(--color-gray-700);
+    padding: 1rem 0;
+}
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.detail-item span:first-child {
+    color: var(--color-gray-400);
+}
+
+.product-description h4,
+.size-selection h4 {
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+}
+
+/*--------------------------------------------------------------
+05. Seleção de Tamanho
+--------------------------------------------------------------*/
+.size-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.size-btn {
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 0.5rem;
+    background: var(--color-gray-800);
+    color: var(--color-white);
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.size-btn:disabled {
+    background: var(--color-gray-800);
+    color: var(--color-gray-600);
+    text-decoration: line-through;
+    cursor: not-allowed;
+}
+
+.size-btn.selected {
+    background: var(--color-yellow);
+    color: var(--color-black);
+}
+
+.size-btn:not(:disabled):hover {
+    background: var(--color-gray-700);
+}
+
+/*--------------------------------------------------------------
+06. Botão Adicionar ao Carrinho
+--------------------------------------------------------------*/
+.add-to-cart-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: var(--color-yellow);
+    color: var(--color-black);
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    font-size: 1.125rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart-btn:hover {
+    background: var(--color-yellow-hover);
+}
+
+.add-to-cart-btn.success {
+    background: #cececc;
+}
+
+/*--------------------------------------------------------------
+07. Informação de Envio & Cuidados
+--------------------------------------------------------------*/
+.shipping-info {
+    background: var(--color-gray-800);
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.shipping-text {
+    color: var(--color-yellow);
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+.care-instructions {
+    color: var(--color-gray-400);
+    font-size: 0.875rem;
+}
+
+/*--------------------------------------------------------------
+08. Controlo da Loja (Filtros / Ordenação)
+--------------------------------------------------------------*/
+.shop-controls {
+    margin-bottom: 1rem;
+}
+
+/*--------------------------------------------------------------
+09. Media Queries - Design Responsivo
+--------------------------------------------------------------*/
+
+/* Tablets até 991px */
+@media (max-width: 991px) {
+    .shop-controls {
+        margin-bottom: 1rem;
+    }
+
+    .product-date {
+        text-align: right;
+    }
+}
+
+/* Tablets & Pequenos Laptops até 1024px */
+@media (max-width: 1024px) {
+    .product-detail {
+        grid-template-columns: 1fr;
+    }
+
+    .main-image img {
+        height: 400px;
+    }
+}
+
+/* Telemóveis até 768px */
+@media (max-width: 768px) {
+    .product-gallery {
+        flex-direction: column-reverse;
+    }
+
+    .thumbnails {
+        flex-direction: row;
+        overflow-x: auto;
+    }
+
+    .product-date {
+        font-size: 0.807rem;
+        text-align: right;
+    }
+
+    .main-image,
+    .product-info {
+        width: 100%;
+    }
+}
+
+/* Telefone Pequeno até 576px */
+@media (max-width: 576px) {
+    .main-image img {
+        height: 300px;
+    }
+
+    .product-model {
+        font-size: 1.25rem;
+    }
+
+    .product-price {
+        font-size: 1.5rem;
+    }
+
+    .add-to-cart-btn {
+        padding: 0.75rem;
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,375 @@
+/* ================================
+   RESPONSIVIDADE - EQUIPA ADM
+   ================================ */
+
+/* --------------------------------
+   MOBILE FIRST - até 576px
+   -------------------------------- */
+@media (max-width: 576px) {
+    .eqadm-main {
+        left: 0;
+        padding: 1rem;
+        top: var(--header-height);
+        bottom: 0;
+    }
+
+    .eqadm-title {
+        font-size: 1.5rem;
+    }
+
+    .eqadm-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .eqadm-actions-bar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
+
+    .eqadm-actions-left,
+    .eqadm-actions-right {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .eqadm-search-container {
+        min-width: auto;
+        width: 100%;
+    }
+
+    .eqadm-btn {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .eqadm-filters-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .eqadm-modal-content {
+        width: 95%;
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    .eqadm-modal-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .eqadm-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .eqadm-modal-actions {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .eqadm-modal-actions .eqadm-btn {
+        width: 100%;
+    }
+
+    /* Tabela responsiva em mobile */
+    .eqadm-table-container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .eqadm-table {
+        min-width: 800px;
+    }
+
+    .eqadm-table th,
+    .eqadm-table td {
+        padding: 0.5rem 0.25rem;
+        font-size: 0.8rem;
+    }
+
+    .eqadm-table img.eqadm-avatar {
+        width: 40px;
+        height: 40px;
+    }
+
+    .eqadm-table-actions {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    .eqadm-table-actions .eqadm-btn {
+        width: auto;
+        padding: 0.25rem 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    .eqadm-pagination {
+        flex-wrap: wrap;
+        gap: 0.25rem;
+    }
+
+    .eqadm-pagination-btn {
+        padding: 0.5rem;
+        min-width: 35px;
+        font-size: 0.8rem;
+    }
+
+    .eqadm-pagination-info {
+        width: 100%;
+        text-align: center;
+        margin: 0.5rem 0;
+    }
+
+    .eqadm-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .eqadm-stat-card {
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .eqadm-stat-number {
+        font-size: 1.5rem;
+    }
+}
+
+/* --------------------------------
+   SMALL TABLETS - 577px a 768px
+   -------------------------------- */
+@media (min-width: 577px) and (max-width: 768px) {
+    .eqadm-main {
+        left: 0;
+        padding: 1.5rem;
+        top: var(--header-height);
+    }
+
+    .eqadm-actions-bar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
+
+    .eqadm-search-container {
+        min-width: auto;
+    }
+
+    .eqadm-filters-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .eqadm-modal-content {
+        width: 90%;
+        max-width: 500px;
+    }
+
+    .eqadm-form-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .eqadm-table th,
+    .eqadm-table td {
+        padding: 0.6rem 0.4rem;
+        font-size: 0.85rem;
+    }
+
+    .eqadm-table img.eqadm-avatar {
+        width: 45px;
+        height: 45px;
+    }
+
+    .eqadm-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* --------------------------------
+   TABLETS - 769px a 992px
+   -------------------------------- */
+@media (min-width: 769px) and (max-width: 992px) {
+    .eqadm-main {
+        left: var(--adm-sidebar-width);
+        padding: 1.75rem;
+    }
+
+    .eqadm-actions-bar {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .eqadm-search-container {
+        min-width: 250px;
+        flex: 1;
+    }
+
+    .eqadm-filters-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .eqadm-modal-content {
+        max-width: 550px;
+    }
+
+    .eqadm-form-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .eqadm-stats {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* --------------------------------
+   SMALL DESKTOPS - 993px a 1200px
+   -------------------------------- */
+@media (min-width: 993px) and (max-width: 1200px) {
+    .eqadm-main {
+        padding: 2rem;
+    }
+
+    .eqadm-filters-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .eqadm-modal-content {
+        max-width: 600px;
+    }
+
+    .eqadm-stats {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* --------------------------------
+   LARGE DESKTOPS - 1201px a 1540px
+   -------------------------------- */
+@media (min-width: 1201px) and (max-width: 1540px) {
+    .eqadm-main {
+        top: 10%;
+        bottom: -55%;
+        padding: 1.7rem;
+    }
+
+    .eqadm-filters-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .eqadm-stats {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* --------------------------------
+   EXTRA LARGE DESKTOPS - 1541px+
+   -------------------------------- */
+@media (min-width: 1541px) {
+    .eqadm-main {
+        padding: 2.5rem;
+    }
+
+    .eqadm-filters-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .eqadm-modal-content {
+        max-width: 700px;
+    }
+
+    .eqadm-stats {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+/* --------------------------------
+   SIDEBAR RESPONSIVA
+   -------------------------------- */
+@media (max-width: 992px) {
+    .eqadm-main {
+        left: 0;
+    }
+
+    /* Quando sidebar está visível em mobile */
+    .adm-sidebar-show~.eqadm-main {
+        left: var(--adm-sidebar-width);
+    }
+}
+
+/* --------------------------------
+   MELHORIAS DE ACESSIBILIDADE
+   -------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+    .eqadm-modal-content {
+        animation: none;
+    }
+
+    .eqadm-btn,
+    .eqadm-icon-link,
+    .eqadm-table img.eqadm-avatar {
+        transition: none;
+    }
+}
+
+/* --------------------------------
+   PRINT STYLES
+   -------------------------------- */
+@media print {
+    .eqadm-main {
+        position: static;
+        left: 0;
+        padding: 1rem;
+        background: white;
+        color: black;
+    }
+
+    .eqadm-actions-bar,
+    .eqadm-filters-panel,
+    .eqadm-pagination,
+    .eqadm-modal-backdrop {
+        display: none !important;
+    }
+
+    .eqadm-table {
+        border: 1px solid #000;
+    }
+
+    .eqadm-table th,
+    .eqadm-table td {
+        border: 1px solid #000;
+        color: black;
+        background: white;
+    }
+
+    .eqadm-table th {
+        background: #f0f0f0 !important;
+    }
+}
+
+/* --------------------------------
+   DARK MODE ESPECÍFICO
+   -------------------------------- */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-gray-900: #0a0a0a;
+        --color-gray-800: #1a1a1a;
+        --color-gray-700: #2a2a2a;
+    }
+}
+
+/* --------------------------------
+   HIGH CONTRAST MODE
+   -------------------------------- */
+@media (prefers-contrast: high) {
+    .eqadm-btn-primary {
+        background-color: #ffff00;
+        color: #000000;
+        border-color: #ffff00;
+    }
+
+    .eqadm-table th,
+    .eqadm-table td {
+        border: 2px solid var(--color-white);
+    }
+
+    .eqadm-modal-content {
+        border: 3px solid var(--color-yellow);
+    }
+}

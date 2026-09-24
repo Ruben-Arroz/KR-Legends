@@ -1,0 +1,148 @@
+{
+    "gameModes": [
+        {
+            "id": "drag-race",
+            "title": "Corrida Drag Race",
+            "status": "available",
+            "statusText": "Disponível",
+            "description": "Um sprint de alta intensidade focado em aceleração pura e reflexos rápidos. Teste os limites do teu carro numa corrida em linha reta de curta distância, onde cada milissegundo conta.",
+            "features": [
+                "Corrida em linha reta de curta distância",
+                "Foco em aceleração e trocas de marcha perfeitas",
+                "Rankings de tempo para competição global",
+                "Variedade de superfícies e condições climáticas"
+            ],
+            "media": {
+                "type": "video",
+                "src": "Videos/Video da apresentação PAP.mp4",
+                "thumbnail": "Imagens/Random/Drift2.png"
+            }
+        },
+        {
+            "id": "straight-race",
+            "title": "Corrida de Rua Longa e Reta",
+            "status": "available",
+            "statusText": "Disponível",
+            "description": "Põe à prova a velocidade máxima do teu carro em corridas longas e retas. Um verdadeiro teste para os amantes de alta velocidade, onde a afinação perfeita do motor e aerodinâmica são essenciais.",
+            "features": [
+                "Percursos extensos para atingir velocidades máximas",
+                "Otimizado para corridas de veículos de alta potência",
+                "Múltiplas rotas para estratégias diferentes",
+                "Modo noturno para uma experiência autêntica"
+            ],
+            "media": {
+                "type": "video",
+                "src": "Videos/Video da apresentação PAP.mp4",
+                "thumbnail": "Imagens/Random/Drift2.png"
+            }
+        },
+        {
+            "id": "curve-race",
+            "title": "Corrida com Múltiplas Curvas",
+            "status": "available",
+            "statusText": "Disponível",
+            "description": "Domina a arte do drift com este circuito técnico repleto de curvas desafiadoras. Um percurso projetado para testar as tuas habilidades de manobra em curvas fechadas e chicanes.",
+            "features": [
+                "Percurso técnico com curvas de diferentes ângulos",
+                "Oportunidades para drift em cada curva",
+                "Classificação baseada na posição final",
+                "Superfícies variadas para desafio adicional"
+            ],
+            "media": {
+                "type": "video",
+                "src": "Videos/Video da apresentação PAP.mp4",
+                "thumbnail": "Imagens/Random/Drift2.png"
+            }
+        },
+        {
+            "id": "rally-race",
+            "title": "Corrida de Rally",
+            "status": "available",
+            "statusText": "Disponível",
+            "description": "Enfrenta a natureza selvagem em terrenos acidentados e imprevisíveis. Esta corrida off-road põe à prova a suspensão do teu carro e a tua capacidade de navegação em condições extremas.",
+            "features": [
+                "Circuitos em estradas de terra batida e cascalho",
+                "Obstáculos naturais e saltos desafiadores",
+                "Condições climáticas dinâmicas",
+                "Modo co-piloto com notas de percurso"
+            ],
+            "media": {
+                "type": "video",
+                "src": "Videos/Video da apresentação PAP.mp4",
+                "thumbnail": "Imagens/Random/Drift2.png"
+            }
+        },
+        {
+            "id": "mountain-climb",
+            "title": "Corrida de Montanha",
+            "status": "coming-soon",
+            "statusText": "Em Breve",
+            "description": "Desafia a gravidade e a tua coragem neste percurso íngreme e sinuoso. Uma subida épica que testa os limites do teu carro e as tuas habilidades em terrenos de alta altitude.",
+            "features": [
+                "Estradas íngremes e curvas fechadas",
+                "Mudanças drásticas de elevação",
+                "Cenários panorâmicos de tirar o fôlego",
+                "Condições atmosféricas únicas de alta montanha"
+            ],
+            "media": {
+                "type": "image",
+                "src": "Imagens/Random/Drift2.png",
+                "thumbnail": ""
+            }
+        },
+        {
+            "id": "formula-d",
+            "title": "Competição de Estilo Formula D",
+            "status": "planning",
+            "statusText": "Em Planeamento",
+            "description": "Uma competição de drift profissional com regras e pontuação oficiais. Mostra o teu estilo, precisão e controle numa arena dedicada ao drift, avaliada por juízes virtuais.",
+            "features": [
+                "Sistema de pontuação baseado em regras da Formula D",
+                "Análise de ângulo, linha e estilo",
+                "Batalhas head-to-head contra outros jogadores",
+                "Circuitos inspirados em pistas de drift famosas"
+            ],
+            "media": {
+                "type": "image",
+                "src": "Imagens/Random/Drift2.png",
+                "thumbnail": ""
+            }
+        },
+        {
+            "id": "tuning-contest",
+            "title": "Concurso de Tuning com Votação do Público",
+            "status": "planning",
+            "statusText": "Em Planeamento",
+            "description": "Liberta a tua criatividade e constrói o carro dos teus sonhos. Um modo não competitivo onde a estética e originalidade são mais importantes que a velocidade, com votação da comunidade.",
+            "features": [
+                "Personalizações detalhadas de interior e exterior",
+                "Sistema de votação da comunidade",
+                "Exposições virtuais e encontros de carros",
+                "Recompensas exclusivas para os vencedores"
+            ],
+            "media": {
+                "type": "image",
+                "src": "Imagens/Random/Drift2.png",
+                "thumbnail": ""
+            }
+        },
+        {
+            "id": "secret-mode",
+            "title": "Modo Especial a Revelar",
+            "status": "secret",
+            "statusText": "Classificado",
+            "description": "Detalhes ainda em segredo... Algo épico está a ser preparado pela equipa KR Legends que irá revolucionar a tua experiência de jogo. Fica atento às nossas redes sociais para não perderes a revelação!",
+            "features": [
+                "Detalhes em desenvolvimento",
+                "Novas mecânicas inovadoras",
+                "Experiência nunca antes vista",
+                "Mais informações em breve"
+            ],
+            "media": {
+                "type": "image",
+                "src": "Imagens/Random/Drift2.png",
+                "thumbnail": ""
+            }
+        }
+    ]
+}

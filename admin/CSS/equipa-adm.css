@@ -1,0 +1,600 @@
+/* Variáveis */
+:root {
+    --color-yellow: #ffc107;
+    --color-yellow-hover: #ffca2c;
+    --color-gray-900: #111111;
+    --color-gray-800: #1f1f1f;
+    --color-gray-700: #2d2d2d;
+    --color-gray-600: #4a4a4a;
+    --color-gray-500: #666666;
+    --color-gray-400: #888888;
+    --color-white: #ffffff;
+    --color-success: #28a745;
+    --color-danger: #dc3545;
+    --color-info: #17a2b8;
+
+    --sidebar-width: 250px;
+    --header-height: 70px;
+    --border-radius: 8px;
+    --transition-fast: 0.2s ease;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* --------------------------------
+   1. LAYOUT PRINCIPAL
+   -------------------------------- */
+.eqadm-main {
+    position: absolute;
+    top: 10%;
+    bottom: -22%;
+    left: var(--adm-sidebar-width);
+    right: 0;
+    padding: 2rem;
+    background-color: var(--color-black);
+    overflow-y: auto;
+    box-sizing: border-box;
+    color: var(--color-white);
+}
+
+/* --------------------------------
+   2. CABEÇALHO DA PÁGINA
+   -------------------------------- */
+.eqadm-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--color-gray-700);
+}
+
+.eqadm-title {
+    margin-top: 1.3%;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-yellow);
+    font-weight: 700;
+}
+
+.eqadm-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 0;
+    color: var(--color-gray-400);
+    line-height: 1.5;
+}
+
+/* --------------------------------
+   3. BARRA DE AÇÕES
+   -------------------------------- */
+.eqadm-actions-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: var(--color-gray-800);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.eqadm-actions-left {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.eqadm-actions-right {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+/* --------------------------------
+   4. BOTÕES
+   -------------------------------- */
+.eqadm-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    transition: all var(--transition-fast);
+    cursor: pointer;
+    border: 2px solid transparent;
+    white-space: nowrap;
+}
+
+.eqadm-btn-primary {
+    background-color: var(--color-yellow);
+    color: var(--color-gray-900);
+    border-color: var(--color-yellow);
+}
+
+.eqadm-btn-primary:hover {
+    background-color: var(--color-yellow-hover);
+    border-color: var(--color-yellow-hover);
+    color: var(--color-gray-900);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(255, 193, 7, 0.3);
+}
+
+.eqadm-btn-secondary {
+    background-color: transparent;
+    color: var(--color-yellow);
+    border-color: var(--color-yellow);
+}
+
+.eqadm-btn-secondary:hover {
+    background-color: var(--color-yellow);
+    color: var(--color-gray-900);
+    transform: translateY(-1px);
+}
+
+.eqadm-btn-sm {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.85rem;
+}
+
+.eqadm-btn-danger {
+    background-color: var(--color-danger);
+    color: var(--color-white);
+    border-color: var(--color-danger);
+}
+
+.eqadm-btn-danger:hover {
+    background-color: #c82333;
+    border-color: #c82333;
+    color: var(--color-white);
+}
+
+/* --------------------------------
+   5. CAMPO DE PESQUISA
+   -------------------------------- */
+.eqadm-search-container {
+    position: relative;
+    flex: 1;
+    min-width: 600px;
+}
+
+.eqadm-search-input {
+    width: 100%;
+    padding: 0.75rem 1rem 0.75rem 2.5rem;
+    border: 2px solid var(--color-gray-600);
+    border-radius: var(--border-radius);
+    background: var(--color-gray-900);
+    color: var(--color-white);
+    font-size: 0.95rem;
+    transition: all var(--transition-fast);
+}
+
+.eqadm-search-input:focus {
+    outline: none;
+    border-color: var(--color-yellow);
+    box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.1);
+}
+
+.eqadm-search-icon {
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-gray-400);
+    font-size: 1.1rem;
+}
+
+/* --------------------------------
+   6. PAINEL DE FILTROS
+   -------------------------------- */
+.eqadm-filters-panel {
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    background-color: var(--color-gray-800);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    border-left: 4px solid var(--color-yellow);
+}
+
+.eqadm-filters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.eqadm-filter-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.eqadm-filter-label {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--color-white);
+    font-size: 0.9rem;
+}
+
+.eqadm-filter-select {
+    padding: 0.75rem;
+    border: 2px solid var(--color-gray-600);
+    border-radius: var(--border-radius);
+    background: var(--color-gray-900);
+    color: var(--color-white);
+    font-size: 0.9rem;
+    transition: all var(--transition-fast);
+}
+
+.eqadm-filter-select:focus {
+    outline: none;
+    border-color: var(--color-yellow);
+    box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.1);
+}
+
+/* --------------------------------
+   7. TABELA DE MEMBROS
+   -------------------------------- */
+.eqadm-table-container {
+    background-color: var(--color-gray-800);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    margin-bottom: 1.5rem;
+}
+
+.eqadm-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: transparent;
+}
+
+.eqadm-table th {
+    background-color: var(--color-gray-700);
+    color: var(--color-white);
+    padding: 1rem 0.75rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-bottom: 2px solid var(--color-gray-600);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.eqadm-table td {
+    padding: 0.75rem;
+    border-bottom: 1px solid var(--color-gray-700);
+    color: var(--color-white);
+    font-size: 0.9rem;
+    vertical-align: middle;
+}
+
+.eqadm-table tbody tr {
+    transition: background-color var(--transition-fast);
+}
+
+.eqadm-table tbody tr:hover {
+    background-color: var(--color-gray-700);
+}
+
+.eqadm-table tbody tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.eqadm-table img.eqadm-avatar {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 2px solid var(--color-gray-600);
+    transition: transform var(--transition-fast);
+}
+
+.eqadm-table img.eqadm-avatar:hover {
+    transform: scale(1.1);
+}
+
+/* --------------------------------
+   8. ÍCONES NAS CÉLULAS
+   -------------------------------- */
+.eqadm-icon-link {
+    color: var(--color-yellow);
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: all var(--transition-fast);
+    padding: 0.25rem;
+    border-radius: 4px;
+}
+
+.eqadm-icon-link:hover {
+    color: var(--color-yellow-hover);
+    background-color: rgba(255, 193, 7, 0.1);
+    transform: scale(1.1);
+}
+
+/* --------------------------------
+   9. AÇÕES DA TABELA
+   -------------------------------- */
+.eqadm-table-actions {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+/* --------------------------------
+   10. MODAIS
+   -------------------------------- */
+.eqadm-modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    backdrop-filter: blur(4px);
+}
+
+.eqadm-modal-show {
+    display: flex;
+}
+
+.eqadm-modal-content {
+    background-color: var(--color-gray-800);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    color: var(--color-white);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--color-gray-600);
+    animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px) scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.eqadm-modal-content h2 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    color: var(--color-yellow);
+    font-size: 1.75rem;
+    font-weight: 700;
+    border-bottom: 2px solid var(--color-gray-700);
+    padding-bottom: 0.5rem;
+}
+
+/* --------------------------------
+   11. FORMULÁRIOS
+   -------------------------------- */
+.eqadm-form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.eqadm-form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.eqadm-form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.eqadm-form-group label {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--color-white);
+    font-size: 0.9rem;
+}
+
+.eqadm-form-group input,
+.eqadm-form-group textarea,
+.eqadm-form-group select {
+    padding: 0.75rem;
+    background-color: var(--color-gray-900);
+    color: var(--color-white);
+    border: 2px solid var(--color-gray-600);
+    border-radius: var(--border-radius);
+    font-size: 0.9rem;
+    transition: all var(--transition-fast);
+}
+
+.eqadm-form-group input:focus,
+.eqadm-form-group textarea:focus,
+.eqadm-form-group select:focus {
+    outline: none;
+    border-color: var(--color-yellow);
+    box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.1);
+}
+
+.eqadm-form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.eqadm-form-group small {
+    margin-top: 0.25rem;
+    color: var(--color-gray-400);
+    font-size: 0.8rem;
+}
+
+/* --------------------------------
+   12. AÇÕES DO MODAL
+   -------------------------------- */
+.eqadm-modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--color-gray-700);
+}
+
+/* --------------------------------
+   13. PAGINAÇÃO
+   -------------------------------- */
+.eqadm-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background-color: var(--color-gray-800);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.eqadm-pagination-btn {
+    padding: 0.5rem 0.75rem;
+    border: 2px solid var(--color-gray-600);
+    background-color: var(--color-gray-900);
+    color: var(--color-white);
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    transition: all var(--transition-fast);
+    font-size: 0.9rem;
+    min-width: 40px;
+    text-align: center;
+}
+
+.eqadm-pagination-btn:hover {
+    background-color: var(--color-yellow);
+    color: var(--color-gray-900);
+    border-color: var(--color-yellow);
+    text-decoration: none;
+}
+
+.eqadm-pagination-btn.active {
+    background-color: var(--color-yellow);
+    color: var(--color-gray-900);
+    border-color: var(--color-yellow);
+}
+
+.eqadm-pagination-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.eqadm-pagination-info {
+    color: var(--color-gray-400);
+    font-size: 0.9rem;
+    margin: 0 1rem;
+}
+
+/* --------------------------------
+   14. MENSAGENS DE FEEDBACK
+   -------------------------------- */
+.eqadm-feedback {
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 1rem;
+    font-weight: 500;
+    border-left: 4px solid;
+}
+
+.eqadm-feedback-success {
+    background-color: rgba(40, 167, 69, 0.1);
+    color: var(--color-success);
+    border-left-color: var(--color-success);
+}
+
+.eqadm-feedback-error {
+    background-color: rgba(220, 53, 69, 0.1);
+    color: var(--color-danger);
+    border-left-color: var(--color-danger);
+}
+
+.eqadm-feedback-info {
+    background-color: rgba(23, 162, 184, 0.1);
+    color: var(--color-info);
+    border-left-color: var(--color-info);
+}
+
+/* --------------------------------
+   15. UTILITÁRIOS
+   -------------------------------- */
+.eqadm-text-truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px;
+}
+
+.eqadm-text-center {
+    text-align: center;
+}
+
+.eqadm-text-muted {
+    color: var(--color-gray-400);
+}
+
+.eqadm-hidden {
+    display: none;
+}
+
+/* --------------------------------
+   16. LOADING STATES
+   -------------------------------- */
+.eqadm-loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid var(--color-gray-600);
+    border-radius: 50%;
+    border-top-color: var(--color-yellow);
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* --------------------------------
+   17. ESTATÍSTICAS
+   -------------------------------- */
+.eqadm-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.eqadm-stat-card {
+    background-color: var(--color-gray-800);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    border-left: 4px solid var(--color-yellow);
+}
+
+.eqadm-stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-yellow);
+    margin-bottom: 0.5rem;
+}
+
+.eqadm-stat-label {
+    color: var(--color-gray-400);
+    font-size: 0.9rem;
+}

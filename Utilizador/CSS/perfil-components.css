@@ -1,0 +1,219 @@
+/* components.css - Reusable components for profile page */
+
+/* Card components */
+.kr-card {
+    background: linear-gradient(145deg, #1f1f1f, #111111);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border: 1px solid #2d2d2d;
+    transition: all 0.3s ease;
+}
+
+.kr-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25), 0 0 8px rgba(255, 193, 7, 0.15);
+}
+
+.kr-card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid #ffc107;
+}
+
+.kr-card-icon {
+    color: #ffc107;
+    font-size: 1.25rem;
+    margin-right: 0.75rem;
+}
+
+.kr-card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0;
+}
+
+/* Badge components */
+.kr-badge {
+    display: inline-block;
+    padding: 0.35em 0.65em;
+    font-size: 0.75em;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.375rem;
+    transition: all 0.3s ease;
+}
+
+.kr-badge-yellow {
+    background-color: #ffc107;
+    color: #111111;
+}
+
+.kr-badge-dark {
+    background-color: #1f1f1f;
+    color: #ffffff;
+    border: 1px solid #4a4a4a;
+}
+
+.kr-badge-outline {
+    background-color: transparent;
+    color: #ffc107;
+    border: 1px solid #ffc107;
+}
+
+/* Button components */
+.kr-button {
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.kr-button-primary {
+    background-color: #ffc107;
+    color: #111111;
+    border: none;
+}
+
+.kr-button-primary:hover {
+    background-color: #ffca2c;
+    box-shadow: 0 4px 12px rgba(255, 193, 7, 0.3);
+    transform: translateY(-2px);
+}
+
+.kr-button-secondary {
+    background-color: #2d2d2d;
+    color: #ffffff;
+    border: none;
+}
+
+.kr-button-secondary:hover {
+    background-color: #4a4a4a;
+    box-shadow: 0 4px 12px rgba(74, 74, 74, 0.3);
+    transform: translateY(-2px);
+}
+
+.kr-button-outline {
+    background-color: transparent;
+    color: #ffc107;
+    border: 2px solid #ffc107;
+}
+
+.kr-button-outline:hover {
+    background-color: rgba(255, 193, 7, 0.1);
+    box-shadow: 0 4px 12px rgba(255, 193, 7, 0.15);
+    transform: translateY(-2px);
+}
+
+.kr-button-icon {
+    margin-right: 0.5rem;
+}
+
+/* Avatar components */
+.kr-avatar {
+    position: relative;
+    display: inline-block;
+}
+
+.kr-avatar-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #ffc107;
+    transition: all 0.3s ease;
+}
+
+.kr-avatar-image:hover {
+    transform: scale(1.05);
+    border-color: #ffca2c;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.kr-avatar-status {
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #28a745;
+    border: 3px solid #111111;
+}
+
+/* Progress bar */
+.kr-progress {
+    height: 10px;
+    background-color: #2d2d2d;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 1rem 0;
+}
+
+.kr-progress-bar {
+    height: 100%;
+    background-color: #ffc107;
+    border-radius: 5px;
+    transition: width 0.6s ease;
+}
+
+/* Stats counter */
+.kr-stats {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.kr-stat-item {
+    padding: 0 1rem;
+}
+
+.kr-stat-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffc107;
+    margin-bottom: 0.25rem;
+}
+
+.kr-stat-label {
+    font-size: 0.9rem;
+    color: #888888;
+}
+
+/* Dividers */
+.kr-divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, #ffc107, transparent);
+    margin: 1.5rem 0;
+}
+
+.kr-divider-text {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 1.5rem 0;
+}
+
+.kr-divider-text::before,
+.kr-divider-text::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: #4a4a4a;
+}
+
+.kr-divider-text span {
+    padding: 0 1rem;
+    color: #888888;
+    font-size: 0.9rem;
+}

@@ -1,0 +1,16 @@
+{
+    "versionHistory": [
+        {
+            "date": "maio de 2025 (planejado)",
+            "version": "Implementação de base de dados SQL para criação de contas, início de sessão, gestão de configurações de conta e armazenamento de informações pessoais dos usuários."
+        },
+        {
+            "date": "14 de maio de 2025",
+            "version": "Início da implementação do sistema de notificações com pedido de permissão nativo do navegador e botão de verificação do estado de permissão na página de suporte."
+        },
+        {
+            "date": "30 de abril de 2025",
+            "version": "Implementação de banner de cookies e carrinho de compras utilizando cookies para armazenar itens."
+        }
+    ]
+}

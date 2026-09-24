@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "title": "Corrida Skyline",
+        "description": "Desafia as ruas de Tóquio à noite com o lendário Skyline GT-R.",
+        "category": "events",
+        "imagePath": "Imagens/Capas/Capas_sem_logo/capa1_original.jpeg",
+        "featured": true,
+        "alt": "Skyline GT-R nas ruas de Tóquio à noite",
+        "order": 1
+    },
+    {
+        "id": 2,
+        "title": "Rali no Deserto",
+        "description": "Dunas e pedras criam o cenário ideal para rali extremo.",
+        "category": "tracks",
+        "imagePath": "Imagens/Capas/Capas_sem_logo/Capa3_original.webp",
+        "featured": false,
+        "alt": "Traçado com dunas e rochas",
+        "order": 2
+    },
+    {
+        "id": 3,
+        "title": "Toyota Supra",
+        "description": "O Supra MK4, ícone JDM, pronto para ação intensa.",
+        "category": "cars",
+        "imagePath": "Imagens/Capas/Capas_sem_logo/Capa4_original.webp",
+        "featured": true,
+        "alt": "Supra MK4 numa zona urbana",
+        "order": 3
+    },
+    {
+        "id": 4,
+        "title": "BMW M3 E46",
+        "description": "Desempenho europeu com estilo e precisão alemã.",
+        "category": "cars",
+        "imagePath": "Imagens/Capas/Capas_sem_logo/capa1_original.jpeg",
+        "featured": false,
+        "alt": "BMW M3 E46 em estrada",
+        "order": 4
+    },
+    {
+        "id": 5,
+        "title": "Passagem Alpina",
+        "description": "Curvas técnicas e vistas épicas num traçado de montanha.",
+        "category": "tracks",
+        "imagePath": "Imagens/Capas/Capas_sem_logo/Capa3_original.webp",
+        "featured": false,
+        "alt": "Estrada montanhosa com curvas",
+        "order": 5
+    },
+    {
+        "id": 6,
+        "title": "Drift Arena",
+        "description": "Mostra o teu estilo em curvas desenhadas para drift.",
+        "category": "events",
+        "imagePath": "Imagens/Capas/Capas_sem_logo/Capa4_original.webp",
+        "featured": false,
+        "alt": "Carro a derrapar em pista",
+        "order": 6
+    },
+    {
+        "id": 7,
+        "title": "Le Mans Clássico",
+        "description": "Corridas históricas num dos circuitos mais lendários.",
+        "category": "races",
+        "imagePath": "Imagens/Capas/Capas_sem_logo/capa1_original.jpeg",
+        "featured": true,
+        "alt": "Carro clássico em Le Mans",
+        "order": 7
+    },
+    {
+        "id": 8,
+        "title": "Circuito Molhado",
+        "description": "Asfalto escorregadio e luzes citadinas criam desafio único.",
+        "category": "tracks",
+        "imagePath": "Imagens/Capas/Capas_sem_logo/Capa3_original.webp",
+        "featured": false,
+        "alt": "Rua molhada à noite",
+        "order": 8
+    },
+    {
+        "id": 9,
+        "title": "Supercarros",
+        "description": "Encontro de máquinas potentes para confronto épico.",
+        "category": "events",
+        "imagePath": "Imagens/Capas/Capas_sem_logo/Capa4_original.webp",
+        "featured": true,
+        "alt": "Fila de supercarros prontos",
+        "order": 9
+    },
+    {
+        "id": 10,
+        "title": "Offroad Total",
+        "description": "Supera obstáculos com força bruta e tração total.",
+        "category": "tracks",
+        "imagePath": "Imagens/Capas/Capas_sem_logo/capa1_original.jpeg",
+        "featured": false,
+        "alt": "Veículo todo-terreno em subida",
+        "order": 10
+    },
+    {
+        "id": 11,
+        "title": "Rua Noturna",
+        "description": "Corridas ilegais ganham vida sob luzes de néon.",
+        "category": "events",
+        "imagePath": "Imagens/Capas/Capas_sem_logo/Capa3_original.webp",
+        "featured": false,
+        "alt": "Rua com néons e carro de corrida",
+        "order": 11
+    },
+    {
+        "id": 12,
+        "title": "Nissan GT-R",
+        "description": "Tecnologia JDM de ponta com tração e agressividade.",
+        "category": "cars",
+        "imagePath": "Imagens/Capas/Capas_sem_logo/Capa4_original.webp",
+        "featured": false,
+        "alt": "GT-R pronto para arrancar",
+        "order": 12
+    }
+]

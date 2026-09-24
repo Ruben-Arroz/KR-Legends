@@ -1,0 +1,759 @@
+/* ===== PAP Sections Styling ===== */
+
+/* 1) Define o degradê do wrapper */
+.pap-gradient-wrapper {
+    /* do preto mais claro (#111) no topo, até o preto puro (#000) no fim */
+    background: linear-gradient(to bottom,
+            #111 0%,
+            #0a0a0a 50%,
+            #000 100%);
+}
+
+/* 2) Garante que as secções internas não “quebrem” o degradê */
+.pap-gradient-wrapper .pap-section {
+    background: transparent !important;
+    /* transparência total */
+    margin: 0;
+    /* sem margens extras */
+    padding: 5rem 0;
+    /* espaçamento igual ao anterior */
+}
+
+/* 3) Se estiveres a usar classes como bg-gradient ou nth-child, remove-as */
+.pap-gradient-wrapper .pap-section.bg-gradient,
+.pap-gradient-wrapper .pap-section:nth-child(odd) {
+    background: transparent !important;
+}
+
+/* =====  1. General Section Styling ===== */
+.section-title {
+    color: var(--color-yellow);
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 0.75rem;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-yellow);
+    transition: width 0.3s ease;
+}
+
+.section-title:hover::after {
+    width: 120px;
+}
+
+.section-title.text-center::after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.section-subtitle {
+    color: var(--color-yellow);
+    margin-bottom: 1.25rem;
+}
+
+.pap-section {
+    padding: 5rem 0;
+    position: relative;
+}
+
+.pap-section:nth-child(odd) {
+    background-color: none;
+}
+
+/* =====  2. Project Summary Section ===== */
+#project-summary {
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+}
+
+.summary-block {
+    background-color: rgba(30, 30, 30, 0.7);
+    border-radius: 0.75rem;
+    padding: 2rem;
+    height: 100%;
+    border: 1px solid rgba(255, 215, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.summary-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.summary-icon {
+    font-size: 2rem;
+    color: var(--color-yellow);
+    margin-bottom: 1rem;
+}
+
+/* =====  3. Tools Section ===== */
+.tool-card {
+    background-color: rgba(30, 30, 30, 0.7);
+    border: 1px solid rgba(255, 215, 0, 0.1);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tool-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 215, 0, 0.3);
+}
+
+.tool-icon {
+    font-size: 2.5rem;
+    color: var(--color-yellow);
+    margin-bottom: 1rem;
+}
+
+.tool-title {
+    color: var(--color-white);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.tool-description {
+    color: var(--color-gray-400);
+    font-size: 0.9rem;
+}
+
+/* =====  4. Attachments Section ===== */
+/* Mobile Accordion Styles */
+.custom-accordion {
+    border-radius: 0.75rem;
+    overflow: hidden;
+    border: 1px solid rgba(255, 215, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 2rem;
+}
+
+.custom-accordion-item {
+    background-color: rgba(30, 30, 30, 0.7);
+    border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+    overflow: hidden;
+}
+
+.custom-accordion-item:last-child {
+    border-bottom: none;
+}
+
+.custom-accordion-header {
+    padding: 1.25rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: var(--color-white);
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.custom-accordion-header:hover {
+    background-color: rgba(255, 215, 0, 0.1);
+}
+
+.custom-accordion-icon {
+    margin-right: 1rem;
+    color: var(--color-yellow);
+    font-size: 1.25rem;
+    transition: transform 0.3s ease;
+}
+
+.custom-accordion-item.active .custom-accordion-icon {
+    transform: rotate(5deg) scale(1.2);
+}
+
+.custom-accordion-toggle {
+    margin-left: auto;
+    transition: transform 0.3s;
+    color: var(--color-yellow);
+}
+
+.custom-accordion-item.active .custom-accordion-toggle {
+    transform: rotate(180deg);
+}
+
+.custom-accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: rgba(20, 20, 20, 0.5);
+}
+
+.custom-accordion-body {
+    padding: 1.25rem;
+}
+
+/* Attachment Items - Common Styles */
+.attachment-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    background-color: rgba(30, 30, 30, 0.5);
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.attachment-item:last-child {
+    margin-bottom: 0;
+}
+
+.attachment-item:hover {
+    background-color: rgba(255, 215, 0, 0.1);
+    border-color: rgba(255, 215, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+.attachment-icon {
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-gray-700);
+    border-radius: 0.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    color: var(--color-yellow);
+    font-size: 1.25rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    flex-shrink: 0;
+}
+
+.attachment-item:hover .attachment-icon {
+    background-color: rgba(255, 215, 0, 0.15);
+    transform: scale(1.1);
+}
+
+.attachment-info {
+    flex: 1;
+    min-width: 0;
+    /* Prevent overflow in flex items */
+}
+
+.attachment-title {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.attachment-description {
+    font-size: 0.9rem;
+    color: var(--color-gray-400);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.attachment-link {
+    margin-left: 1rem;
+    color: var(--color-yellow);
+    font-size: 1.25rem;
+    transition: all 0.3s ease;
+    height: 36px;
+    width: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(30, 30, 30, 0.7);
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.attachment-link:hover {
+    transform: scale(1.1);
+    background-color: rgba(255, 215, 0, 0.15);
+}
+
+.attachment-title a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.attachment-title a:hover {
+    text-decoration: underline;
+    color: var(--color-yellow);
+}
+
+/* Desktop Tabs Styles - Enhanced */
+.attachments-card {
+    border-radius: 0.75rem;
+    background-color: rgba(30, 30, 30, 0.7);
+    border: 1px solid rgba(255, 215, 0, 0.1);
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.tab-titles {
+    display: flex;
+    background-color: rgba(20, 20, 20, 0.7);
+    position: relative;
+    border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+}
+
+.tab-link {
+    background: none;
+    border: none;
+    color: var(--color-white);
+    font-weight: 600;
+    cursor: pointer;
+    padding: 1.2rem 1.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+    flex: 1;
+    text-align: center;
+    outline: none;
+}
+
+.tab-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    background-color: var(--color-yellow);
+    transition: width 0.3s ease;
+}
+
+.tab-link.active {
+    color: var(--color-yellow);
+}
+
+.tab-link.active::after {
+    width: 80%;
+}
+
+.tab-link:hover {
+    background-color: rgba(255, 215, 0, 0.05);
+}
+
+.tab-link:not(.active):hover::after {
+    width: 40%;
+    background-color: rgba(255, 215, 0, 0.5);
+}
+
+.tab-content {
+    padding: 2rem;
+}
+
+.tab-content .tab-pane {
+    display: none;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.tab-content .tab-pane.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.tab-pane:not(.active) {
+    height: 0;
+    overflow: hidden;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .tab-link {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .tab-content {
+        padding: 1.5rem;
+    }
+
+    .attachment-item {
+        flex-wrap: wrap;
+    }
+
+    .attachment-link {
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 767.98px) {
+
+    .attachments-card {
+        display: none;
+    }
+
+    .custom-accordion-header {
+        padding: 1rem;
+    }
+
+    .attachment-item {
+        padding: 0.625rem;
+    }
+
+    .attachment-icon {
+        width: 32px;
+        height: 32px;
+        font-size: 1rem;
+    }
+
+    .attachment-description {
+        font-size: 0.8rem;
+    }
+
+    .attachment-link {
+        height: 30px;
+        width: 30px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .attachment-title {
+        font-size: 0.9rem;
+    }
+
+    .attachment-description {
+        max-width: 150px;
+    }
+}
+
+/* =====  5. Timeline Section ===== */
+.timeline-container {
+    position: relative;
+    padding: 2rem 0;
+}
+
+.timeline-track {
+    position: relative;
+    top: 50%;
+    height: 4px;
+    background-color: rgba(255, 215, 0, 0.2);
+    margin: 5rem 0;
+    width: 88%;
+    left: 7.5%;
+}
+
+.timeline-markers {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.timeline-marker {
+    width: 30px;
+    height: 30px;
+    background-color: var(--color-gray-700);
+    border: 3px solid var(--color-yellow);
+    border-radius: 50%;
+    position: absolute;
+    top: -13px;
+    transform: translateX(-50%);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.timeline-marker:hover {
+    transform: translateX(-50%) scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+}
+
+.timeline-marker.active {
+    background-color: var(--color-yellow);
+}
+
+.timeline-marker[data-phase="planeamento"] {
+    left: 2%;
+}
+
+.timeline-marker[data-phase="design"] {
+    left: 25%;
+}
+
+.timeline-marker[data-phase="prototipacao"] {
+    left: 50%;
+}
+
+.timeline-marker[data-phase="testes"] {
+    left: 75%;
+}
+
+.timeline-marker[data-phase="polimento"] {
+    left: 98%;
+}
+
+.timeline-label {
+    position: absolute;
+    bottom: -30px;
+    transform: translateX(-50%);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-yellow);
+    text-align: center;
+    width: 100px;
+}
+
+.timeline-marker[data-phase="planeamento"] .timeline-label {
+    left: 0%;
+}
+
+.timeline-marker[data-phase="design"] .timeline-label {
+    left: 25%;
+}
+
+.timeline-marker[data-phase="prototipacao"] .timeline-label {
+    left: 50%;
+}
+
+.timeline-marker[data-phase="testes"] .timeline-label {
+    left: 75%;
+}
+
+.timeline-marker[data-phase="polimento"] .timeline-label {
+    left: 100%;
+}
+
+.timeline-content {
+    background-color: rgba(30, 30, 30, 0.7);
+    border: 1px solid rgba(255, 215, 0, 0.1);
+    border-radius: 0.75rem;
+    padding: 2rem;
+    margin-top: 3rem;
+    min-height: 250px;
+}
+
+.timeline-content h4 {
+    color: var(--color-yellow);
+    margin-bottom: 0.5rem;
+}
+
+.timeline-date {
+    font-size: 0.9rem;
+    color: var(--color-gray-400);
+    margin-bottom: 1rem;
+}
+
+.timeline-image {
+    border: 1px solid rgba(255, 215, 0, 0.1);
+    transition: transform 0.3s;
+    width: 80%;
+}
+
+.timeline-image:hover {
+    transform: scale(1.02);
+}
+
+.timeline-description {
+    max-width: 611px;
+    line-height: 1.6;
+    text-align: justify;
+    word-break: break-word;
+}
+
+/* =====  6. Obstacles Section ===== */
+.obstacles-container {
+    perspective: 1000px;
+}
+
+.obstacle-card {
+    height: 300px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    cursor: pointer;
+}
+
+.obstacle-card.flipped {
+    transform: rotateY(180deg);
+}
+
+.obstacle-card-front,
+.obstacle-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    background-color: rgba(30, 30, 30, 0.7);
+    border: 1px solid rgba(255, 215, 0, 0.1);
+}
+
+.obstacle-card-back {
+    transform: rotateY(180deg);
+}
+
+.obstacle-icon {
+    font-size: 2.5rem;
+    color: var(--color-yellow);
+    margin-bottom: 1rem;
+}
+
+.obstacle-title {
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--color-white);
+}
+
+.obstacle-label {
+    font-size: 0.85rem;
+    color: var(--color-gray-400);
+    margin-bottom: 0.5rem;
+}
+
+.obstacle-text {
+    color: var(--color-white);
+}
+
+.obstacle-hint {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    color: var(--color-gray-400);
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+}
+
+.obstacle-hint i {
+    margin-left: 0.5rem;
+}
+
+/* =====  7. Conclusion Section ===== */
+.next-steps-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 2rem;
+}
+
+.next-steps-list li {
+    padding: 1rem 0;
+    position: relative;
+    padding-left: 2.5rem;
+    transition: all 0.3s ease;
+}
+
+.next-steps-list li:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 1.25rem;
+    width: 12px;
+    height: 12px;
+    background-color: var(--color-yellow);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.next-steps-list li:after {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 2rem;
+    width: 2px;
+    height: calc(100% - 2rem);
+    background: linear-gradient(to bottom, rgba(255, 215, 0, 0.3), transparent);
+    transition: all 0.3s ease;
+}
+
+.next-steps-list li:last-child:after {
+    display: none;
+}
+
+.next-steps-list li:hover {
+    transform: translateX(10px);
+    color: var(--color-yellow);
+}
+
+.next-steps-list li:hover:before {
+    transform: scale(1.5);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+}
+
+#conclusion p {
+    width: 40%;
+    text-align: justify;
+}
+
+/* =====  8. Responsive Adjustments ===== */
+@media (max-width: 768px) {
+
+    #conclusion p {
+        width: 95%;
+        text-align: justify;
+        margin: 0 auto;
+    }
+
+    .status-card {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .status-card i {
+        font-size: 30px;
+    }
+
+    .status-card h3 {
+        font-size: 18px;
+    }
+
+    .status-card p {
+        font-size: 14px;
+    }
+
+    .timeline-marker {
+        width: 24px;
+        height: 24px;
+        top: -10px;
+    }
+
+    .timeline-label {
+        font-size: 0.75rem;
+        width: 80px;
+    }
+
+    .obstacle-card {
+        height: 350px;
+        margin-bottom: 1.5rem;
+    }
+
+    .timeline-content {
+        min-height: 300px;
+    }
+
+    .summary-block {
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .timeline-label {
+        transform: translateX(-50%) rotate(-45deg);
+        bottom: -45px;
+    }
+
+    .timeline-content {
+        margin-top: 4rem;
+    }
+
+    .tool-card {
+        margin-bottom: 1rem;
+    }
+}

@@ -1,0 +1,5 @@
+# Redireciona qualquer acesso direto à pasta para Index.php
+DirectoryIndex index.html
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^.*$ /~a29621/KRLegends/Index.php [R=302,L]

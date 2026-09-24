@@ -1,0 +1,348 @@
+/*--------------------------------------------------------------
+1. Shop Controls (Search & Filters)
+   Layout para busca de produtos e filtros de cor, género, preço e ordenação
+--------------------------------------------------------------*/
+
+/* --- Container geral dos controlos da loja --- */
+.shop-controls {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* --- Pesquisa --- */
+.search-bar {
+    display: flex;
+    gap: 0.5rem;
+    background: var(--color-gray-900);
+    border: 1px solid var(--color-gray-700);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    transition: border-color 0.3s;
+}
+
+.search-bar:focus-within {
+    border-color: var(--color-yellow);
+}
+
+.search-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: var(--color-white);
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+.search-input::placeholder {
+    color: var(--color-gray-400);
+}
+
+.search-input:focus {
+    outline: none;
+}
+
+.search-button {
+    background: transparent;
+    border: none;
+    color: var(--color-yellow);
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s;
+}
+
+.search-button:hover {
+    transform: scale(1.1);
+}
+
+/* --- Filtros --- */
+.filters {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.filters.open {
+    display: flex;
+}
+
+.filter-select {
+    background: var(--color-gray-900);
+    border: 1px solid var(--color-gray-700);
+    color: var(--color-white);
+    padding: 0.75rem 2rem 0.75rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23ffc107' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 0.75rem;
+    min-width: 140px;
+    transition: border-color 0.3s;
+}
+
+.filter-select:hover,
+.filter-select:focus {
+    border-color: var(--color-yellow);
+    outline: none;
+}
+
+.filter-toggle {
+    background: transparent;
+    border: none;
+    color: var(--color-yellow);
+    font-size: 1.25rem;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.5rem;
+    cursor: pointer;
+}
+
+.filter-toggle.active .bi-funnel {
+    display: none;
+}
+
+.filter-toggle.active .bi-funnel-fill {
+    display: inline;
+}
+
+/*--------------------------------------------------------------
+2. Products Grid
+   Layout de grelha dinâmica para exibir produtos
+--------------------------------------------------------------*/
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+#productsGrid.few-products {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 360px));
+    justify-content: center;
+}
+
+/*--------------------------------------------------------------
+3. Product Card Styles
+   Cartão de produto, imagem, modelo, detalhes e botões
+--------------------------------------------------------------*/
+.product-card {
+    background: var(--color-gray-900);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-0.5rem);
+}
+
+.product-image-container {
+    position: relative;
+}
+
+.product-image {
+    width: 100%;
+    height: 16rem;
+    object-fit: cover;
+}
+
+.product-model {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.75);
+    padding: 0.75rem;
+}
+
+.product-model h4 {
+    color: var(--color-yellow);
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+.product-info {
+    padding: 1rem;
+}
+
+.product-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--color-white);
+    margin-bottom: 0.5rem;
+}
+
+.product-details {
+    color: var(--color-gray-400);
+    font-size: 0.875rem;
+    margin-bottom: 0.25rem;
+}
+
+.product-shipping {
+    color: var(--color-yellow);
+    font-size: 0.875rem;
+    font-style: italic;
+    margin: 1rem 0;
+}
+
+.product-price {
+    color: var(--color-yellow);
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.product-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.product-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 0.875rem;
+    text-decoration: none;
+}
+
+.product-btn-primary {
+    flex: 1;
+    background: var(--color-yellow);
+    color: var(--color-black);
+    border: none;
+}
+
+.product-btn-primary:hover {
+    background: var(--color-yellow-hover);
+    color: black;
+}
+
+.product-btn-secondary {
+    background: transparent;
+    color: var(--color-yellow);
+    border: 1px solid var(--color-yellow);
+}
+
+.product-btn-secondary:hover {
+    background: rgba(255, 193, 7, 0.1);
+}
+
+.product-btn .bi-cart-plus {
+    font-size: 1.35rem;
+    margin-right: 0.1rem;
+}
+
+/*--------------------------------------------------------------
+4. Responsive Media Queries
+   Ajustes específicos para mobile e diferentes larguras de ecrã
+--------------------------------------------------------------*/
+
+/* Tablet e acima */
+@media (min-width: 768px) {
+    #productsGrid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}
+
+/* Smartphones médios */
+@media (min-width: 480px) and (max-width: 767px) {
+    #productsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Tablets até 991px */
+@media (max-width: 991px) {
+    .filters {
+        display: none;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+
+    .filters.open {
+        display: flex;
+    }
+
+    .filter-toggle {
+        display: flex;
+    }
+
+    .shop-controls {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Telemóveis pequenos */
+@media (max-width: 768px) {
+    .filters {
+        flex-direction: column;
+    }
+
+    .filter-select {
+        width: 100%;
+    }
+
+    .search-bar {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 0;
+        background: var(--color-gray-900);
+        border: 1px solid var(--color-gray-700);
+        border-radius: 0.5rem;
+        padding: 0.5rem 3rem 0.5rem 0.5rem;
+        transition: border-color 0.3s;
+        overflow: hidden;
+        margin-bottom: 0.7rem;
+    }
+
+    .search-input {
+        flex: 1;
+        background: transparent;
+        border: none;
+        color: var(--color-white);
+        font-size: 1rem;
+        padding: 0.5rem 0;
+    }
+
+    .search-button {
+        position: absolute;
+        top: 50%;
+        right: 1rem;
+        transform: translateY(-50%);
+        background: transparent;
+        border: none;
+        color: var(--color-yellow);
+        cursor: pointer;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+    }
+
+    .search-button:hover {
+        transform: translateY(-50%) scale(1.1);
+    }
+}
+
+/* Telemóveis extra-pequenos */
+@media (max-width: 479px) {
+    #productsGrid {
+        grid-template-columns: 1fr;
+    }
+}

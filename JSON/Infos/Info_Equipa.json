@@ -1,0 +1,22 @@
+{
+    "processItems": [
+        {
+            "id": 1,
+            "title": "Recrutamento",
+            "description": "Buscamos talentos apaixonados por games e automobilismo. Atualmente procuramos artistas 3D e desenvolvedores com experiência em Roblox Studio.",
+            "icon": "bi-search"
+        },
+        {
+            "id": 2,
+            "title": "Onboarding",
+            "description": "Nossa equipe utiliza ferramentas como Roblox Studio, Visual Studio Code, Filezilla, editores de imagem e video e Discord para colaboração. Novos membros recebem treinamento e mentoria para rápida integração.",
+            "icon": "bi-people"
+        },
+        {
+            "id": 3,
+            "title": "Desenvolvimento",
+            "description": "Trabalhamos com metodologias ágeis, sprints semanais e feedback constante. Valorizamos a inovação e a qualidade em cada elemento do jogo.",
+            "icon": "bi-code-square"
+        }
+    ]
+}

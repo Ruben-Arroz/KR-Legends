@@ -1,0 +1,223 @@
+/*--------------------------------------------------------------
+Discord Widget - Responsividade
+--------------------------------------------------------------*/
+
+/* Tablets e dispositivos médios */
+@media (max-width: 992px) {
+    .discord-section {
+        padding: 4rem 0;
+    }
+
+    .discord-title {
+        font-size: 2.8rem;
+    }
+
+    .discord-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 3rem;
+    }
+
+    .discord-widget-card {
+        max-width: 100%;
+        padding: 1.5rem;
+        margin: 0 1rem;
+    }
+
+    .discord-features {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        max-width: 600px;
+    }
+}
+
+/* Smartphones e dispositivos pequenos */
+@media (max-width: 768px) {
+    .discord-section {
+        padding: 3rem 0;
+    }
+
+    .discord-title {
+        font-size: 2.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .discord-title::after {
+        width: 80px;
+        height: 3px;
+    }
+
+    .discord-subtitle {
+        font-size: 1rem;
+        margin-bottom: 2.5rem;
+        padding: 0 1rem;
+    }
+
+    .discord-widget-container {
+        margin-bottom: 2rem;
+        padding: 0 1rem;
+    }
+
+    .discord-widget-card {
+        padding: 1.25rem;
+        border-radius: 12px;
+        margin: 0;
+    }
+
+    .discord-widget-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .discord-widget-icon svg {
+        width: 28px;
+        height: 28px;
+    }
+
+    .discord-widget-title {
+        font-size: 1.3rem;
+    }
+
+    .discord-widget-description {
+        font-size: 0.9rem;
+    }
+
+    .discord-iframe {
+        height: 400px;
+    }
+
+    .discord-info-section {
+        margin-top: 2rem;
+        padding: 0 1rem;
+    }
+
+    .discord-features {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin-top: 1.5rem;
+        max-width: 100%;
+    }
+
+    .discord-feature {
+        padding: 1.25rem;
+        border-radius: 8px;
+    }
+
+    .discord-feature-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 1.1rem;
+    }
+
+    .discord-cta-button {
+        padding: 0.875rem 1.5rem;
+        font-size: 1rem;
+        margin-top: 1.5rem;
+    }
+}
+
+/* Dispositivos muito pequenos */
+@media (max-width: 480px) {
+    .discord-section {
+        padding: 2.5rem 0;
+    }
+
+    .discord-title {
+        font-size: 1.8rem;
+    }
+
+    .discord-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .discord-widget-card {
+        padding: 1rem;
+        margin: 0 0.5rem;
+    }
+
+    .discord-iframe {
+        height: 350px;
+    }
+
+    .discord-feature {
+        padding: 1rem;
+    }
+
+    .discord-feature-icon {
+        width: 32px;
+        height: 32px;
+        font-size: 1rem;
+    }
+
+    .discord-feature-title {
+        font-size: 1rem;
+    }
+
+    .discord-feature-text {
+        font-size: 0.85rem;
+    }
+
+    .discord-cta-button {
+        padding: 0.75rem 1.25rem;
+        font-size: 0.95rem;
+        border-radius: 40px;
+    }
+}
+
+/* Ajustes para orientação landscape em dispositivos móveis */
+@media (max-width: 768px) and (orientation: landscape) {
+    .discord-section {
+        padding: 2rem 0;
+    }
+
+    .discord-title {
+        font-size: 2rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .discord-subtitle {
+        margin-bottom: 2rem;
+    }
+
+    .discord-iframe {
+        height: 300px;
+    }
+
+    .discord-info-section {
+        margin-top: 1.5rem;
+    }
+
+    .discord-features {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}
+
+/* Ajustes para telas muito largas */
+@media (min-width: 1400px) {
+    .discord-widget-container {
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .discord-features {
+        max-width: 900px;
+    }
+}
+
+/* Remover hover effects em dispositivos touch */
+@media (hover: none) and (pointer: coarse) {
+    .discord-widget-card:hover {
+        transform: none;
+    }
+
+    .discord-feature:hover {
+        transform: none;
+        background: var(--color-gray-800);
+    }
+
+    .discord-cta-button:hover {
+        transform: none;
+        background: var(--color-yellow);
+    }
+}

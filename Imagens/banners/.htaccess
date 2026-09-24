@@ -1,0 +1,11 @@
+# Define index para esta pasta
+DirectoryIndex index.php
+
+# Liga o motor de reescrita
+RewriteEngine On
+
+# Se tentarem aceder à pasta (não a um ficheiro específico)
+RewriteCond %{REQUEST_FILENAME} -d
+
+# Redireciona para a página de perfil
+RewriteRule ^.*$ /~a29621/KRLegends/Utilizador/perfil.php [R=302,L]

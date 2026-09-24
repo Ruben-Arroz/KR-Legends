@@ -1,0 +1,364 @@
+/* =================================
+   SUPORTE ADM - RESPONSIVIDADE
+   ================================= */
+
+@media (min-width: 1201px) and (max-width: 1540px) {
+    .sprtadm-main {
+        top: 10%;
+        bottom: -55%;
+        padding: 1.75rem;
+    }
+}
+
+/* Tablets grandes e desktops pequenos */
+@media (max-width: 1200px) {
+    .sprtadm-main {
+        left: 250px;
+        padding: 1.5rem;
+    }
+
+    .sprtadm-requests-grid {
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 1.25rem;
+    }
+
+    .sprtadm-title {
+        font-size: 2rem;
+    }
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+    .sprtadm-main {
+        left: 0;
+        padding: 1.25rem;
+        top: 12%;
+    }
+
+    .sprtadm-filters-section {
+        padding: 1.25rem;
+    }
+
+    .sprtadm-requests-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 1rem;
+    }
+
+    .sprtadm-stat-card {
+        padding: 1.25rem;
+    }
+
+    .sprtadm-stat-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.1rem;
+    }
+
+    .sprtadm-stat-number {
+        font-size: 1.5rem;
+    }
+
+    .sprtadm-filter-buttons {
+        flex-direction: column;
+    }
+
+    .sprtadm-filter-buttons .sprtadm-btn {
+        width: 100%;
+    }
+
+    /* Responsividade da paginação */
+    .sprtadm-pagination {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .sprtadm-pagination-info {
+        margin-left: 0;
+        order: -1;
+    }
+
+    .sprtadm-pagination-btn {
+        min-width: 35px;
+        height: 35px;
+        font-size: 0.8rem;
+    }
+}
+
+/* Smartphones grandes */
+@media (max-width: 768px) {
+    .sprtadm-main {
+        padding: 1rem;
+        top: 14%;
+    }
+
+    .sprtadm-header {
+        margin-bottom: 1.5rem;
+        padding-bottom: 1rem;
+    }
+
+    .sprtadm-title {
+        font-size: 1.75rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .sprtadm-subtitle {
+        font-size: 1rem;
+    }
+
+    .sprtadm-filters-section {
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .sprtadm-filters-form .row>* {
+        margin-bottom: 1rem;
+    }
+
+    .sprtadm-requests-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .sprtadm-request-card {
+        padding: 1.25rem;
+    }
+
+    .sprtadm-card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+
+    .sprtadm-card-actions {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.5rem;
+    }
+
+    .sprtadm-card-actions .sprtadm-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .sprtadm-card-meta {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .sprtadm-stats-section .row {
+        --bs-gutter-x: 0.75rem;
+    }
+
+    .sprtadm-stat-card {
+        padding: 1rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .sprtadm-section-title {
+        font-size: 1.25rem;
+    }
+
+    /* Responsividade da paginação para dispositivos móveis */
+    .sprtadm-pagination {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .sprtadm-pagination-info {
+        margin-left: 0;
+        order: -1;
+    }
+
+    .sprtadm-pagination-btn {
+        min-width: 35px;
+        height: 35px;
+        font-size: 0.8rem;
+    }
+}
+
+/* Smartphones pequenos */
+@media (max-width: 576px) {
+    .sprtadm-main {
+        padding: 0.75rem;
+        top: 16%;
+    }
+
+    .sprtadm-title {
+        font-size: 1.5rem;
+    }
+
+    .sprtadm-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .sprtadm-filters-section {
+        padding: 0.75rem;
+    }
+
+    .sprtadm-form-control,
+    .sprtadm-form-select {
+        padding: 0.625rem 0.875rem;
+        font-size: 0.9rem;
+    }
+
+    .sprtadm-input-group .sprtadm-form-control {
+        padding-left: 2.25rem;
+    }
+
+    .sprtadm-btn {
+        padding: 0.625rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .sprtadm-request-card {
+        padding: 1rem;
+    }
+
+    .sprtadm-card-title {
+        font-size: 1rem;
+    }
+
+    .sprtadm-card-description {
+        font-size: 0.9rem;
+    }
+
+    .sprtadm-meta-item {
+        font-size: 0.8rem;
+    }
+
+    .sprtadm-status-btn {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.8rem;
+    }
+
+    .sprtadm-stat-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.75rem;
+    }
+
+    .sprtadm-stat-icon {
+        width: 2.25rem;
+        height: 2.25rem;
+        font-size: 1rem;
+    }
+
+    .sprtadm-stat-number {
+        font-size: 1.25rem;
+    }
+
+    .sprtadm-stat-label {
+        font-size: 0.85rem;
+    }
+
+    .sprtadm-empty-state {
+        padding: 2rem 1rem;
+    }
+
+    .sprtadm-empty-state i {
+        font-size: 3rem;
+    }
+
+    .sprtadm-empty-state h3 {
+        font-size: 1.25rem;
+    }
+
+    .sprtadm-empty-state p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Ajustes específicos para orientação landscape em dispositivos móveis */
+@media (max-width: 768px) and (orientation: landscape) {
+    .sprtadm-main {
+        top: 18%;
+    }
+
+    .sprtadm-header {
+        margin-bottom: 1rem;
+    }
+
+    .sprtadm-filters-section {
+        margin-bottom: 1rem;
+    }
+
+    .sprtadm-stats-section {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Ajustes para telas muito pequenas */
+@media (max-width: 320px) {
+    .sprtadm-main {
+        padding: 0.5rem;
+    }
+
+    .sprtadm-title {
+        font-size: 1.25rem;
+    }
+
+    .sprtadm-filters-section,
+    .sprtadm-request-card {
+        padding: 0.75rem;
+    }
+
+    .sprtadm-requests-grid {
+        gap: 0.75rem;
+    }
+
+    .sprtadm-card-badges {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .sprtadm-badge {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.6rem;
+    }
+}
+
+/* Melhorias para acessibilidade em dispositivos móveis */
+@media (max-width: 768px) {
+
+    .sprtadm-btn,
+    .sprtadm-status-btn {
+        min-height: 44px;
+        /* Tamanho mínimo recomendado para touch targets */
+    }
+
+    .sprtadm-form-control,
+    .sprtadm-form-select {
+        min-height: 44px;
+    }
+}
+
+/* Ajustes para impressão */
+@media print {
+    .sprtadm-main {
+        position: static;
+        left: 0;
+        padding: 1rem;
+        background-color: white;
+        color: black;
+    }
+
+    .sprtadm-filters-section {
+        display: none;
+    }
+
+    .sprtadm-card-actions {
+        display: none;
+    }
+
+    .sprtadm-request-card {
+        break-inside: avoid;
+        border: 1px solid #ccc;
+        margin-bottom: 1rem;
+    }
+
+    .sprtadm-pagination {
+        display: none;
+    }
+}

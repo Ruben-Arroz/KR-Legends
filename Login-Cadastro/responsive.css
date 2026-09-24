@@ -1,0 +1,228 @@
+/* 
+  responsive.css - Comprehensive responsiveness improvements
+  This file adds responsive styling to the KR Legends website
+  focusing on responsiveness and logo positioning.
+*/
+
+/* ==================== Logo Styling ==================== */
+.login-logo {
+    width: 150px;
+    height: auto;
+    max-height: 150px;
+    margin: 0 auto 1.5rem;
+    display: block;
+    transition: all 0.3s ease;
+    object-fit: contain;
+}
+
+/* Default logo source via background to maintain aspect ratio */
+#brandLogo {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#brandLogo:hover {
+    transform: scale(1.05);
+}
+
+/* ==================== Card Improvements ==================== */
+.auth-card {
+    width: 100%;
+    max-width: 550px;
+    min-width: initial;
+    /* Remove fixed min-width that causes issues on mobile */
+    margin: 1rem auto;
+    border: 2px solid var(--border-color);
+    border-radius: 1rem;
+    background-color: var(--bg-card);
+    animation: fadeIn 0.5s ease-out;
+    box-shadow: var(--shadow-md);
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* ==================== Fix Row Display ==================== */
+.row {
+    width: 100%;
+    display: flex !important;
+    flex-wrap: wrap;
+    margin-right: -0.75rem;
+    margin-left: -0.75rem;
+}
+
+/* ==================== Container Improvements ==================== */
+.container {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* ==================== Form Improvements ==================== */
+.form-floating {
+    margin-bottom: 1rem;
+}
+
+.password-toggle {
+    right: 0.75rem;
+    z-index: 5;
+}
+
+.password-requirements li {
+    font-size: 0.8rem;
+}
+
+/* Pequenos celulares (até 360px de largura) */
+@media (max-width: 360px) {
+    .login-logo {
+        width: 100px;
+        /* logo um pouco menor em celulares bem estreitos */
+        max-height: 100px;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Médios celulares (361px a 420px) */
+@media (min-width: 361px) and (max-width: 420px) {
+    .login-logo {
+        width: 120px;
+        /* logo levemente maior em celulares um pouco mais largos */
+        max-height: 120px;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Grandes celulares / Pequenos tablets (421px a 767px) */
+@media (min-width: 421px) and (max-width: 767px) {
+    .login-logo {
+        width: 140px;
+        /* logo maior para telas de celular grandes / tablets pequenos */
+        max-height: 140px;
+        margin-bottom: 1.25rem;
+    }
+}
+
+/* Tablets / Laptops pequenos (768px a 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .login-logo {
+        width: 150px;
+        /* logo padrão médio */
+        max-height: 150px;
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Notebooks / Desktops (≥ 992px) */
+@media (min-width: 992px) {
+    .login-logo {
+        width: 160px;
+        /* logo grande em telas de desktop */
+        max-height: 160px;
+        margin-bottom: 2rem;
+    }
+}
+
+/* ==================== Print Media ==================== */
+@media print {
+
+    .theme-toggle,
+    #particles-js {
+        display: none !important;
+    }
+
+    body {
+        background-color: white !important;
+        color: black !important;
+    }
+
+    .auth-card {
+        box-shadow: none !important;
+        border: 1px solid #ddd !important;
+    }
+}
+
+/* Pequenos celulares (até 360px) – .auth-card ocupa praticamente toda largura */
+@media (max-width: 360px) {
+    .auth-card {
+        max-width: 100%;
+        padding: 0.9rem;
+    }
+}
+
+/* Médios celulares (361px a 420px) */
+@media (min-width: 361px) and (max-width: 420px) {
+    .auth-card {
+        max-width: 100%;
+        padding: 1.25rem;
+    }
+}
+
+/* Grandes celulares / Pequenos tablets (421px a 767px) */
+@media (min-width: 421px) and (max-width: 767px) {
+    .auth-card {
+        max-width: 500px;
+        padding: 1.3rem;
+    }
+}
+
+/* Tablets / Laptops pequenos (768px a 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .auth-card {
+        max-width: 700px;
+        padding: 2rem;
+    }
+}
+
+/* Notebooks / Desktops (992px a 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .auth-card {
+        max-width: 900px;
+        padding: 1.6rem;
+    }
+}
+
+/* Telas grandes (≥ 1200px) */
+@media (min-width: 1200px) {
+    .auth-card {
+        max-width: 1100px;
+        /* limita até 1000px para não ficar esticado demais */
+        padding: 2.5rem;
+    }
+}
+
+/* Super telas (ultrawide ≥ 1600px) */
+@media (min-width: 1600px) {
+    .auth-card {
+        max-width: 1300px;
+        padding: 3.5rem;
+    }
+}
+
+/* Animação simples de fadeIn */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@media (min-width: 768px) {
+    .col-md-6 {
+        flex: 0 0 auto;
+        width: 90%;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-lg-5 {
+        flex: 0 0 auto;
+        width: 75%;
+    }
+}

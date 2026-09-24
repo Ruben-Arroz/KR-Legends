@@ -1,0 +1,42 @@
+{
+    "places": {
+        "113586179382037": {
+            "instances": {
+                "8ceb19b0-0813-4abc-a8c3-c86856bc633b": {
+                    "playersOnline": 0,
+                    "timestamp": 1759855390,
+                    "version": "v1.28.61"
+                }
+            },
+            "playersOnline": 0,
+            "timestamp": 1759855390,
+            "version": "v1.28.61",
+            "nextMaintenance": "2025-05-28T08:30:00Z",
+            "avgSessionDuration": 35,
+            "sessions": [
+                31,
+                38
+            ],
+            "lastSessionReset": "2025-10-07"
+        },
+        "82893120277584": {
+            "instances": {
+                "b6993cfa-9c07-441c-a37a-398cacb5f9c3": {
+                    "playersOnline": 0,
+                    "timestamp": 1759855755,
+                    "version": "v1.10.94"
+                }
+            },
+            "playersOnline": 0,
+            "timestamp": 1759855755,
+            "version": "v1.10.94",
+            "nextMaintenance": "2025-05-28T08:30:00Z",
+            "avgSessionDuration": 274,
+            "sessions": [
+                183,
+                364
+            ],
+            "lastSessionReset": "2025-10-07"
+        }
+    }
+}

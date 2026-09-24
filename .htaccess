@@ -1,0 +1,3 @@
+DirectoryIndex Index.php
+ErrorDocument 404 /~a29621/KRLegends/404.php
+ErrorDocument 403 /~a29621/KRLegends/404.php

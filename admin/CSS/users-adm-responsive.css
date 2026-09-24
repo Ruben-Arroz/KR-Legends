@@ -1,0 +1,367 @@
+/* ================================
+   RESPONSIVIDADE - USERS ADM
+   ================================ */
+
+/* --------------------------------
+   MOBILE FIRST - até 576px
+   -------------------------------- */
+@media (max-width: 576px) {
+    .uadm-main {
+        left: 0;
+        padding: 1rem;
+        top: var(--header-height);
+        bottom: 0;
+    }
+
+    .uadm-title {
+        font-size: 1.5rem;
+    }
+
+    .uadm-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .uadm-actions-bar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
+
+    .uadm-actions-left,
+    .uadm-actions-right {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .uadm-search-container {
+        min-width: auto;
+        width: 100%;
+    }
+
+    .uadm-btn {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .uadm-filters-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .uadm-modal-content {
+        width: 95%;
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    .uadm-modal-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .uadm-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .uadm-modal-actions {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .uadm-modal-actions .uadm-btn {
+        width: 100%;
+    }
+
+    /* Tabela responsiva em mobile */
+    .uadm-table-container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .uadm-table {
+        min-width: 1000px;
+    }
+
+    .uadm-table th,
+    .uadm-table td {
+        padding: 0.5rem 0.25rem;
+        font-size: 0.8rem;
+    }
+
+    .uadm-table img.uadm-avatar {
+        width: 40px;
+        height: 40px;
+    }
+
+    .uadm-table img.uadm-banner-thumb {
+        width: 50px;
+        height: 25px;
+    }
+
+    .uadm-table-actions {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    .uadm-table-actions .uadm-btn {
+        width: auto;
+        padding: 0.25rem 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    .uadm-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .uadm-stat-card {
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .uadm-stat-number {
+        font-size: 1.5rem;
+    }
+}
+
+/* --------------------------------
+   SMALL TABLETS - 577px a 768px
+   -------------------------------- */
+@media (min-width: 577px) and (max-width: 768px) {
+    .uadm-main {
+        left: 0;
+        padding: 1.5rem;
+        top: var(--header-height);
+    }
+
+    .uadm-actions-bar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
+
+    .uadm-search-container {
+        min-width: auto;
+    }
+
+    .uadm-filters-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .uadm-modal-content {
+        width: 90%;
+        max-width: 500px;
+    }
+
+    .uadm-form-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .uadm-table th,
+    .uadm-table td {
+        padding: 0.6rem 0.4rem;
+        font-size: 0.85rem;
+    }
+
+    .uadm-table img.uadm-avatar {
+        width: 45px;
+        height: 45px;
+    }
+
+    .uadm-table img.uadm-banner-thumb {
+        width: 55px;
+        height: 28px;
+    }
+
+    .uadm-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* --------------------------------
+   TABLETS - 769px a 992px
+   -------------------------------- */
+@media (min-width: 769px) and (max-width: 992px) {
+    .uadm-main {
+        left: var(--adm-sidebar-width);
+        padding: 1.75rem;
+    }
+
+    .uadm-actions-bar {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .uadm-search-container {
+        min-width: 250px;
+        flex: 1;
+    }
+
+    .uadm-filters-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .uadm-modal-content {
+        max-width: 600px;
+    }
+
+    .uadm-form-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .uadm-stats {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* --------------------------------
+   SMALL DESKTOPS - 993px a 1200px
+   -------------------------------- */
+@media (min-width: 993px) and (max-width: 1200px) {
+    .uadm-main {
+        padding: 2rem;
+    }
+
+    .uadm-filters-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .uadm-modal-content {
+        max-width: 700px;
+    }
+
+    .uadm-stats {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* --------------------------------
+   LARGE DESKTOPS - 1201px a 1540px
+   -------------------------------- */
+@media (min-width: 1201px) and (max-width: 1540px) {
+    .uadm-main {
+        top: 10%;
+        bottom: -55%;
+        padding: 1.7rem;
+    }
+
+    .uadm-filters-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .uadm-stats {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* --------------------------------
+   EXTRA LARGE DESKTOPS - 1541px+
+   -------------------------------- */
+@media (min-width: 1541px) {
+    .uadm-main {
+        padding: 2.5rem;
+    }
+
+    .uadm-filters-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .uadm-modal-content {
+        max-width: 800px;
+    }
+
+    .uadm-stats {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+/* --------------------------------
+   SIDEBAR RESPONSIVA
+   -------------------------------- */
+@media (max-width: 992px) {
+    .uadm-main {
+        left: 0;
+    }
+
+    /* Quando sidebar está visível em mobile */
+    .adm-sidebar-show~.uadm-main {
+        left: var(--adm-sidebar-width);
+    }
+}
+
+/* --------------------------------
+   MELHORIAS DE ACESSIBILIDADE
+   -------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+    .uadm-modal-content {
+        animation: none;
+    }
+
+    .uadm-btn,
+    .uadm-table img.uadm-avatar,
+    .uadm-table img.uadm-banner-thumb {
+        transition: none;
+    }
+}
+
+/* --------------------------------
+   PRINT STYLES
+   -------------------------------- */
+@media print {
+    .uadm-main {
+        position: static;
+        left: 0;
+        padding: 1rem;
+        background: white;
+        color: black;
+    }
+
+    .uadm-actions-bar,
+    .uadm-filters-panel,
+    .uadm-modal-backdrop {
+        display: none !important;
+    }
+
+    .uadm-table {
+        border: 1px solid #000;
+    }
+
+    .uadm-table th,
+    .uadm-table td {
+        border: 1px solid #000;
+        color: black;
+        background: white;
+    }
+
+    .uadm-table th {
+        background: #f0f0f0 !important;
+    }
+}
+
+/* --------------------------------
+   DARK MODE ESPECÍFICO
+   -------------------------------- */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-gray-900: #0a0a0a;
+        --color-gray-800: #1a1a1a;
+        --color-gray-700: #2a2a2a;
+    }
+}
+
+/* --------------------------------
+   HIGH CONTRAST MODE
+   -------------------------------- */
+@media (prefers-contrast: high) {
+    .uadm-btn-primary {
+        background-color: #ffff00;
+        color: #000000;
+        border-color: #ffff00;
+    }
+
+    .uadm-table th,
+    .uadm-table td {
+        border: 2px solid var(--color-white);
+    }
+
+    .uadm-modal-content {
+        border: 3px solid var(--color-yellow);
+    }
+}

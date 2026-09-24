@@ -1,0 +1,301 @@
+/*--------------------------------------------------------------
+7. Modal e Componentes Relacionados (Feedback Modal)
+--------------------------------------------------------------*/
+
+.feedback-modal {
+    --scrollbar-track-color: rgba(17, 17, 17, 0.3);
+    --scrollbar-thumb-color: rgba(255, 193, 7, 0.6);
+    --scrollbar-thumb-hover-color: rgba(255, 193, 7, 0.8);
+    --scrollbar-arrows-color: rgba(200, 200, 200, 0.7);
+
+    max-height: 90vh;
+    overflow-y: auto;
+    padding-right: 8px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-thumb-color) var(--scrollbar-track-color);
+}
+
+/* WebKit (Chrome, Edge, Brave, etc.) */
+.feedback-modal::-webkit-scrollbar {
+    width: 8px;
+}
+
+.feedback-modal::-webkit-scrollbar-track {
+    background: var(--scrollbar-track-color);
+    border-radius: 4px;
+}
+
+.feedback-modal::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb-color);
+    border-radius: 4px;
+}
+
+.feedback-modal::-webkit-scrollbar-thumb:hover {
+    background-color: var(--scrollbar-thumb-hover-color);
+}
+
+/* (Opcional) Estilizar as setas, se visíveis */
+.feedback-modal::-webkit-scrollbar-button {
+    background-color: var(--scrollbar-arrows-color);
+}
+
+.feedback-modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 2000;
+    backdrop-filter: blur(10px);
+    justify-content: center;
+    align-items: center;
+}
+
+.feedback-modal-overlay.active {
+    display: flex !important;
+    opacity: 1 !important;
+}
+
+.feedback-modal {
+    background-color: #1a1a1a;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    width: 90%;
+    max-width: 700px;
+    max-height: 900px;
+    overflow-y: auto;
+    position: relative;
+    border: 1px solid rgba(255, 193, 7, 0.25);
+    box-shadow: 0 0 12px rgba(255, 193, 7, 0.05);
+}
+
+.feedback-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.feedback-modal-header h2 {
+    margin-top: 6%;
+    color: #ffc107;
+    font-size: 1.25rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.feedback-close-btn {
+    background: none;
+    border: none;
+    color: #666;
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.feedback-close-btn:hover {
+    color: #fff;
+}
+
+.feedback-modal-form {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.feedback-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.feedback-form-group label {
+    color: #ffc107;
+    font-weight: 500;
+}
+
+.feedback-modal-form select,
+.feedback-modal-form input,
+.feedback-modal-form textarea {
+    background-color: rgb(42, 42, 42);
+    color: rgb(255, 255, 255);
+    width: 100%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(51, 51, 51);
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.feedback-rating-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.feedback-rating-btn {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    border: 1px solid #333;
+    background-color: #2a2a2a;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.feedback-rating-btn.active {
+    background-color: #ffc107;
+    color: #000;
+    border-color: #ffc107;
+}
+
+.feedback-file-upload {
+    display: block;
+    max-width: 300px;
+    margin: 1rem 0;
+}
+
+.feedback-file-input {
+    display: none;
+}
+
+.feedback-file-label {
+    display: inline-block;
+    padding: 8px 16px;
+    border: 1px solid #ffc107;
+    background-color: transparent;
+    color: #ffc107;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    border-radius: 6px;
+}
+
+.feedback-file-label:hover {
+    color: #e0a800;
+}
+
+.feedback-file-hint {
+    font-weight: 400;
+    opacity: 0.98;
+}
+
+.feedback-upload-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    max-width: 300px;
+}
+
+.feedback-upload-group .uploaded-file-name {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 230px;
+    /* ajusta conforme o botão ao lado */
+}
+
+/* Garante que o botão de remover não expanda o wrapper */
+.feedback-upload-group .feedback-remove-file-btn {
+    flex-shrink: 0;
+}
+
+.feedback-remove-file-btn {
+    background: transparent;
+    border: none;
+    color: #ffc107;
+    font-size: 1.2em;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+    transition: color 0.2s ease;
+}
+
+.feedback-remove-file-btn:hover {
+    color: #e0a800;
+}
+
+.feedback-validation-errors {
+    background-color: #2D1618;
+    color: #F87171;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.feedback-validation-errors p {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.feedback-validation-errors p::before {
+    content: "";
+    display: block;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: #F87171;
+    border-radius: 50%;
+}
+
+.feedback-submit-btn {
+    background-color: #ffc107;
+    color: #000;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.feedback-submit-btn:hover {
+    background-color: #ffca2c;
+}
+
+/* Hidden utility */
+.hidden {
+    display: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .feedback-modal {
+        margin: 1.1rem;
+        margin-top: 100px;
+        width: 100%;
+    }
+
+    .feedback-rating-group {
+        gap: 0.5rem;
+    }
+
+    .feedback-rating-btn {
+        width: 2rem;
+        height: 2rem;
+    }
+}
+
+@media (max-width: 1600px) {
+    .feedback-modal {
+        margin-top: 250px;
+        margin-bottom: 150px;
+        width: 85%;
+        height: 85%;
+    }
+}

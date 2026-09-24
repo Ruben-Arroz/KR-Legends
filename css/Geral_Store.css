@@ -1,0 +1,139 @@
+/*--------------------------------------------------------------
+1. CSS Variables
+   Definição de cores principais para uso em todo o projeto
+--------------------------------------------------------------*/
+:root {
+    --color-black: #000000;
+    --color-yellow: #ffc107;
+    --color-yellow-hover: #ffca2c;
+    --color-gray-900: #111111;
+    --color-gray-800: #1f1f1f;
+    --color-gray-700: #2d2d2d;
+    --color-gray-600: #4a4a4a;
+    --color-gray-500: #666666;
+    --color-gray-400: #888888;
+    --color-white: #ffffff;
+}
+
+/*--------------------------------------------------------------
+2. Reset & Base Global
+   Normaliza margens, padding e box-sizing para consistência
+--------------------------------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*--------------------------------------------------------------
+3. Typography & Body
+   Define família tipográfica, cores de fundo/texto e espaçamento de linha
+--------------------------------------------------------------*/
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    line-height: 1.5;
+}
+
+
+/*--------------------------------------------------------------
+4. Main Layout & Title
+   Container principal e título da loja
+--------------------------------------------------------------*/
+.main {
+    padding: 6rem 1rem 4rem;
+}
+
+.main-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: var(--color-yellow);
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+/* ========== Modal Stock Alert ========== */
+#stock-alert-modal.modal-custom {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+    padding: 1rem;
+}
+
+#stock-alert-modal .modal-content {
+    background-color: var(--color-gray-900);
+    color: var(--color-white);
+    border-radius: 1rem;
+    padding: 1.5rem 1.25rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    transform: translateY(-20px);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#stock-alert-modal.modal-custom.active .modal-content {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+#stock-alert-modal h2 {
+    margin: 0 0 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+#stock-alert-modal p {
+    margin: 0 0 1rem;
+    font-size: 1rem;
+    color: var(--color-gray-400);
+    line-height: 1.4;
+}
+
+#stock-alert-modal #stock-alert-ok {
+    display: inline-block;
+    padding: 0.6rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-black);
+    background-color: var(--color-yellow);
+    border: 2px solid var(--color-yellow);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+#stock-alert-modal #stock-alert-ok:hover,
+#stock-alert-modal #stock-alert-ok:focus {
+    background-color: var(--color-yellow-hover);
+    border-color: var(--color-yellow-hover);
+    outline: none;
+}
+
+@media (max-width: 480px) {
+    #stock-alert-modal .modal-content {
+        padding: 1.25rem 1rem;
+        max-width: 90%;
+    }
+
+    #stock-alert-modal h2 {
+        font-size: 1.25rem;
+    }
+
+    #stock-alert-modal p {
+        font-size: 0.95rem;
+    }
+
+    #stock-alert-modal #stock-alert-ok {
+        width: 100%;
+        padding: 0.75rem;
+    }
+}

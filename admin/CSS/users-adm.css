@@ -1,0 +1,733 @@
+/* ================================
+   USERS-ADM.CSS - Enhanced Version
+   ================================ */
+
+/* Variáveis */
+:root {
+    --color-yellow: #ffc107;
+    --color-yellow-hover: #ffca2c;
+    --color-gray-900: #111111;
+    --color-gray-800: #1f1f1f;
+    --color-gray-700: #2d2d2d;
+    --color-gray-600: #4a4a4a;
+    --color-gray-500: #666666;
+    --color-gray-400: #888888;
+    --color-white: #ffffff;
+    --color-success: #28a745;
+    --color-danger: #dc3545;
+    --color-info: #17a2b8;
+
+    --sidebar-width: 250px;
+    --header-height: 70px;
+    --border-radius: 8px;
+    --transition-fast: 0.2s ease;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    --scrollbar-track-color: rgba(17, 17, 17, 0.3);   /* cor do trilho */
+    --scrollbar-thumb-color: rgba(255, 193, 7, 0.6);  /* cor do polegar */
+    --scrollbar-thumb-hover-color: rgba(255, 193, 7, 0.8);
+    --scrollbar-arrows-color: rgba(200, 200, 200, 0.7);/* cor das setas */
+}
+
+/* --------------------------------
+   1. LAYOUT PRINCIPAL
+   -------------------------------- */
+.uadm-main {
+    position: absolute;
+    top: 10%;
+    bottom: -22%;
+    left: var(--adm-sidebar-width);
+    right: 0;
+    padding: 2rem;
+    background-color: var(--color-black);
+    overflow-y: auto;
+    box-sizing: border-box;
+    color: var(--color-white);
+}
+
+/* --------------------------------
+   2. CABEÇALHO DA PÁGINA
+   -------------------------------- */
+.uadm-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--color-gray-700);
+}
+
+.uadm-title {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-yellow);
+    font-weight: 700;
+}
+
+.uadm-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 0;
+    color: var(--color-gray-400);
+    line-height: 1.5;
+}
+
+/* --------------------------------
+   3. BARRA DE AÇÕES
+   -------------------------------- */
+.uadm-actions-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: var(--color-gray-800);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.uadm-actions-left {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.uadm-actions-right {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+/* --------------------------------
+   4. BOTÕES
+   -------------------------------- */
+.uadm-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    transition: all var(--transition-fast);
+    cursor: pointer;
+    border: 2px solid transparent;
+    white-space: nowrap;
+}
+
+.uadm-btn-primary {
+    background-color: var(--color-yellow);
+    color: var(--color-gray-900);
+    border-color: var(--color-yellow);
+}
+
+.uadm-btn-primary:hover {
+    background-color: var(--color-yellow-hover);
+    border-color: var(--color-yellow-hover);
+    color: var(--color-gray-900);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(255, 193, 7, 0.3);
+}
+
+.uadm-btn-secondary {
+    background-color: transparent;
+    color: var(--color-yellow);
+    border-color: var(--color-yellow);
+}
+
+.uadm-btn-secondary:hover {
+    background-color: var(--color-yellow);
+    color: var(--color-gray-900);
+    transform: translateY(-1px);
+}
+
+.uadm-btn-sm {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.85rem;
+}
+
+.uadm-btn-danger {
+    background-color: var(--color-danger);
+    color: var(--color-white);
+    border-color: var(--color-danger);
+}
+
+.uadm-btn-danger:hover {
+    background-color: #c82333;
+    border-color: #c82333;
+    color: var(--color-white);
+}
+
+/* --------------------------------
+   5. CAMPO DE PESQUISA
+   -------------------------------- */
+.uadm-search-container {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.uadm-search-input {
+    width: 100%;
+    padding: 0.75rem 1rem 0.75rem 2.5rem;
+    border: 2px solid var(--color-gray-600);
+    border-radius: var(--border-radius);
+    background: var(--color-gray-900);
+    color: var(--color-white);
+    font-size: 0.95rem;
+    transition: all var(--transition-fast);
+}
+
+.uadm-search-input:focus {
+    outline: none;
+    border-color: var(--color-yellow);
+    box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.1);
+}
+
+.uadm-search-icon {
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-gray-400);
+    font-size: 1.1rem;
+}
+
+/* --------------------------------
+   6. PAINEL DE FILTROS
+   -------------------------------- */
+.uadm-filters-panel {
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    background-color: var(--color-gray-800);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    border-left: 4px solid var(--color-yellow);
+}
+
+.uadm-filters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.uadm-filter-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.uadm-filter-label {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--color-white);
+    font-size: 0.9rem;
+}
+
+.uadm-filter-select {
+    padding: 0.75rem;
+    border: 2px solid var(--color-gray-600);
+    border-radius: var(--border-radius);
+    background: var(--color-gray-900);
+    color: var(--color-white);
+    font-size: 0.9rem;
+    transition: all var(--transition-fast);
+}
+
+.uadm-filter-select:focus {
+    outline: none;
+    border-color: var(--color-yellow);
+    box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.1);
+}
+
+/* --------------------------------
+   7. ESTATÍSTICAS
+   -------------------------------- */
+.uadm-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.uadm-stat-card {
+    background-color: var(--color-gray-800);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    border-left: 4px solid var(--color-yellow);
+}
+
+.uadm-stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-yellow);
+    margin-bottom: 0.5rem;
+}
+
+.uadm-stat-label {
+    color: var(--color-gray-400);
+    font-size: 0.9rem;
+}
+
+/* --------------------------------
+   8. TABELA DE UTILIZADORES
+   -------------------------------- */
+.uadm-table-container {
+    background-color: var(--color-gray-800);
+    border-radius: var(--border-radius);
+    overflow: auto;
+    box-shadow: var(--box-shadow);
+    margin-bottom: 1.5rem;
+}
+
+.uadm-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: transparent;
+}
+
+.uadm-table th {
+    background-color: var(--color-gray-700);
+    color: var(--color-white);
+    padding: 1rem 0.75rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-bottom: 2px solid var(--color-gray-600);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.uadm-table td {
+    padding: 0.75rem;
+    border-bottom: 1px solid var(--color-gray-700);
+    color: var(--color-white);
+    font-size: 0.9rem;
+    vertical-align: middle;
+}
+
+.uadm-table tbody tr {
+    transition: background-color var(--transition-fast);
+}
+
+.uadm-table tbody tr:hover {
+    background-color: var(--color-gray-700);
+}
+
+.uadm-table tbody tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.uadm-table img.uadm-avatar {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 2px solid var(--color-gray-600);
+    transition: transform var(--transition-fast);
+}
+
+.uadm-table img.uadm-avatar:hover {
+    transform: scale(1.1);
+}
+
+.uadm-table img.uadm-banner-thumb {
+    width: 60px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 2px solid var(--color-gray-600);
+    transition: transform var(--transition-fast);
+}
+
+.uadm-table img.uadm-banner-thumb:hover {
+    transform: scale(1.1);
+}
+
+/* --------------------------------
+   9. BADGES DE ROLE
+   -------------------------------- */
+.uadm-role-badge {
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.uadm-role-user {
+    background-color: rgba(23, 162, 184, 0.2);
+    color: var(--color-info);
+    border: 1px solid var(--color-info);
+}
+
+.uadm-role-adm {
+    background-color: rgba(255, 193, 7, 0.2);
+    color: var(--color-yellow);
+    border: 1px solid var(--color-yellow);
+}
+
+.uadm-role-superadm {
+    background-color: rgba(220, 53, 69, 0.2);
+    color: var(--color-danger);
+    border: 1px solid var(--color-danger);
+}
+
+/* --------------------------------
+   10. AÇÕES DA TABELA
+   -------------------------------- */
+.uadm-table-actions {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+/* --------------------------------
+   11. MODAIS
+   -------------------------------- */
+.uadm-modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    backdrop-filter: blur(4px);
+}
+
+.uadm-modal-show {
+    display: flex;
+}
+
+.uadm-modal-content {
+    background-color: var(--color-gray-800);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    overflow-y: auto;
+    color: var(--color-white);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--color-gray-600);
+    animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px) scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.uadm-modal-content h2 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    color: var(--color-yellow);
+    font-size: 1.75rem;
+    font-weight: 700;
+    border-bottom: 2px solid var(--color-gray-700);
+    padding-bottom: 0.5rem;
+}
+
+/* --------------------------------
+   12. FORMULÁRIOS
+   -------------------------------- */
+.uadm-form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.uadm-form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.uadm-form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.uadm-form-group label {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--color-white);
+    font-size: 0.9rem;
+}
+
+.uadm-form-group input,
+.uadm-form-group textarea,
+.uadm-form-group select {
+    padding: 0.75rem;
+    background-color: var(--color-gray-900);
+    color: var(--color-white);
+    border: 2px solid var(--color-gray-600);
+    border-radius: var(--border-radius);
+    font-size: 0.9rem;
+    transition: all var(--transition-fast);
+}
+
+.uadm-form-group input:focus,
+.uadm-form-group textarea:focus,
+.uadm-form-group select:focus {
+    outline: none;
+    border-color: var(--color-yellow);
+    box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.1);
+}
+
+.uadm-form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.uadm-form-group small {
+    margin-top: 0.25rem;
+    color: var(--color-gray-400);
+    font-size: 0.8rem;
+}
+
+/* --------------------------------
+   13. AÇÕES DO MODAL
+   -------------------------------- */
+.uadm-modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--color-gray-700);
+}
+
+/* --------------------------------
+   14. MENSAGENS DE FEEDBACK
+   -------------------------------- */
+.uadm-feedback {
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 1rem;
+    font-weight: 500;
+    border-left: 4px solid;
+}
+
+.uadm-feedback-success {
+    background-color: rgba(40, 167, 69, 0.1);
+    color: var(--color-success);
+    border-left-color: var(--color-success);
+}
+
+.uadm-feedback-error {
+    background-color: rgba(220, 53, 69, 0.1);
+    color: var(--color-danger);
+    border-left-color: var(--color-danger);
+}
+
+.uadm-feedback-info {
+    background-color: rgba(23, 162, 184, 0.1);
+    color: var(--color-info);
+    border-left-color: var(--color-info);
+}
+
+/* --------------------------------
+   15. UTILITÁRIOS
+   -------------------------------- */
+.uadm-text-truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px;
+}
+
+.uadm-text-center {
+    text-align: center;
+}
+
+.uadm-text-muted {
+    color: var(--color-gray-400);
+}
+
+.uadm-hidden {
+    display: none;
+}
+
+/* --------------------------------
+   16. LOADING STATES
+   -------------------------------- */
+.uadm-loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid var(--color-gray-600);
+    border-radius: 50%;
+    border-top-color: var(--color-yellow);
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* --------------------------------
+   17. PAGINAÇÃO
+   -------------------------------- */
+.uadm-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: var(--color-gray-800);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    flex-wrap: wrap;
+}
+
+.uadm-pagination-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    height: 40px;
+    padding: 0.5rem;
+    background-color: var(--color-gray-700);
+    color: var(--color-white);
+    border: 2px solid var(--color-gray-600);
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all var(--transition-fast);
+    cursor: pointer;
+}
+
+.uadm-pagination-btn:hover:not([disabled]) {
+    background-color: var(--color-yellow);
+    color: var(--color-gray-900);
+    border-color: var(--color-yellow);
+    transform: translateY(-1px);
+}
+
+.uadm-pagination-btn.active {
+    background-color: var(--color-yellow);
+    color: var(--color-gray-900);
+    border-color: var(--color-yellow);
+    box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.2);
+}
+
+.uadm-pagination-btn[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: var(--color-gray-600);
+    border-color: var(--color-gray-500);
+}
+
+.uadm-pagination-info {
+    margin-left: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--color-gray-700);
+    border-radius: var(--border-radius);
+    color: var(--color-gray-400);
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+/* Responsividade da paginação */
+@media (max-width: 768px) {
+    .uadm-pagination {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .uadm-pagination-info {
+        margin-left: 0;
+        order: -1;
+    }
+
+    .uadm-pagination-btn {
+        min-width: 35px;
+        height: 35px;
+        font-size: 0.8rem;
+    }
+}
+
+
+
+/* ============================
+   1) TRACK (trilho) do scrollbar
+   ============================ */
+::-webkit-scrollbar-track {
+    background-color: var(--scrollbar-track-color);
+    box-sizing: border-box;
+    /* Caso queira borda ou “espessura” adicional, especifique aqui: */
+    /* border-left: 1px solid rgba(0,0,0,0.1); */
+}
+
+/* ============================
+   2) THUMB (polegar) do scrollbar
+   ============================ */
+::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb-color);
+    border-radius: 3px;
+    /* Se desejar, adicione uma fina borda para destacar: */
+    /* border: 1px solid rgba(0,0,0,0.2); */
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--scrollbar-thumb-hover-color);
+}
+
+/* ===========================================
+   3) BUTTONS (setas) – definindo cor e estilo
+   =========================================== */
+/* 3.1) Tamanho geral das setas (botões) */
+::-webkit-scrollbar-button {
+    display: block;          /* exibe as setas normalmente */
+    width: 1px;              /* largura da área da seta */
+    height: 1px;             /* altura da área da seta */
+    background-color: transparent !important; /* base transparente para receber cor da seta */
+}
+
+/* 3.2) Cor do ícone da seta (elemento interno) */
+/* Em WebKit, as setas são geradas pelo sistema, mas você pode “colorir” a área de fundo 
+   para dar contraste. Se quiser substituir por um SVG ou shape, use background-image. */
+::-webkit-scrollbar-button:vertical:decrement {
+    /* seta para cima */
+    background-color: var(--scrollbar-arrows-color);
+    /* Caso queira uma forma triangular, pode usar clip-path, por exemplo: */
+    /* clip-path: polygon(50% 0%, 0% 100%, 100% 100%); */
+}
+::-webkit-scrollbar-button:vertical:increment {
+    /* seta para baixo */
+    background-color: var(--scrollbar-arrows-color);
+    /* clip-path: polygon(0% 0%, 100% 0%, 50% 100%); */
+}
+
+/* ============================
+   4) DIMENSÕES GERAIS DO SCROLLBAR
+   ============================ */
+/* Define espessura (largura e altura) padrão de 6px */
+::-webkit-scrollbar {
+    width: 1px;
+    height: 1px;
+}
+
+/* ============================
+   5) COMPATIBILIDADE FIREFOX
+   ============================ */
+/* No Firefox, use scrollbar-color para track e thumb; 
+   porém, não há seletor nativo para setas – elas herdaram o estilo do sistema. */
+* {
+    scrollbar-width: thin;   /* “thin” equivale a ~ 8px; não controla setas */
+    scrollbar-color: var(--scrollbar-thumb-color) var(--scrollbar-track-color);
+}

@@ -1,0 +1,288 @@
+/*--------------------------------------------------------------
+Discord Widget - Estilos Principais
+--------------------------------------------------------------*/
+:root {
+    --color-black: #000000;
+    --color-yellow: #ffc107;
+    --color-yellow-hover: #ffca2c;
+    --color-gray-900: #111111;
+    --color-gray-800: #1f1f1f;
+    --color-gray-700: #2d2d2d;
+    --color-gray-600: #4a4a4a;
+    --color-gray-500: #666666;
+    --color-gray-400: #888888;
+    --color-white: #ffffff;
+}
+
+/* Secção principal do Discord */
+.discord-section {
+    background: var(--color-black);
+    padding: 6rem 0;
+    position: relative;
+}
+
+/* Título da secção */
+.discord-title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: var(--color-yellow);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.discord-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 4px;
+    background: var(--color-yellow);
+    border-radius: 2px;
+}
+
+/* Subtítulo */
+.discord-subtitle {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.85);
+    text-align: center;
+    margin-bottom: 4rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+/* Container do widget */
+.discord-widget-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 3rem;
+}
+
+/* Card do widget - agora largo */
+.discord-widget-card {
+    background: var(--color-gray-800);
+    border: 2px solid rgba(255, 193, 7, 0.2);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px;
+}
+
+.discord-widget-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+    border-color: rgba(255, 193, 7, 0.4);
+}
+
+/* Cabeçalho do widget */
+.discord-widget-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.discord-widget-icon {
+    width: 60px;
+    height: 60px;
+    background: #5865F2;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    transition: transform 0.3s ease;
+}
+
+.discord-widget-card:hover .discord-widget-icon {
+    transform: scale(1.05);
+}
+
+.discord-widget-icon svg {
+    width: 32px;
+    height: 32px;
+    fill: white;
+}
+
+.discord-widget-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-yellow);
+    margin-bottom: 0.5rem;
+}
+
+.discord-widget-description {
+    color: var(--color-gray-400);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Container do iframe */
+.discord-iframe-container {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    background: var(--color-gray-800);
+}
+
+.discord-iframe-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--color-yellow);
+    z-index: 1;
+}
+
+.discord-iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+    display: block;
+    background: transparent;
+}
+
+/* Informações adicionais */
+.discord-info-section {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.discord-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.discord-feature {
+    background: var(--color-gray-800);
+    border: 1px solid rgba(255, 193, 7, 0.1);
+    border-radius: 10px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.discord-feature:hover {
+    background: var(--color-gray-700);
+    border-color: rgba(255, 193, 7, 0.3);
+    transform: translateY(-3px);
+}
+
+.discord-feature-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--color-yellow);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    color: var(--color-black);
+    font-size: 1.2rem;
+}
+
+.discord-feature-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-white);
+    margin-bottom: 0.5rem;
+}
+
+.discord-feature-text {
+    color: var(--color-gray-400);
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Botão de ação */
+.discord-cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--color-yellow);
+    color: var(--color-black);
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-top: 5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(255, 193, 7, 0.3);
+}
+
+.discord-cta-button:hover {
+    background: var(--color-yellow-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 193, 7, 0.4);
+    color: var(--color-black);
+    text-decoration: none;
+}
+
+.discord-cta-button:active {
+    transform: translateY(0);
+}
+
+/* Estados de loading */
+.discord-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    background: var(--color-gray-800);
+    border-radius: 10px;
+}
+
+.discord-loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(255, 193, 7, 0.3);
+    border-top: 3px solid var(--color-yellow);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Animações simples */
+@keyframes discord-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.discord-animate-in {
+    animation: discord-fade-in 0.6s ease-out forwards;
+}
+
+.discord-feature-animate {
+    animation: discord-fade-in 0.4s ease-out forwards;
+}

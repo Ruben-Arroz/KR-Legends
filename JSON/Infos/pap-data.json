@@ -1,0 +1,108 @@
+{
+    "attachments": {
+        "presentations": [
+            {
+                "title": "Apresentação Inicial",
+                "description": "Proposta de projeto (Outubro 2024)",
+                "file": "Anexos/Apresentacoes/Apresentacao_Inicial.pdf",
+                "icon": "bi-file-earmark-slides"
+            },
+            {
+                "title": "Apresentação Intermédia #1",
+                "description": "Progresso (Dezembro 2024)",
+                "file": "Anexos/Apresentacoes/Apresentacao_Intermedia1.pdf",
+                "icon": "bi-file-earmark-slides"
+            },
+            {
+                "title": "Apresentação Intermédia #2",
+                "description": "Progresso (Março 2025)",
+                "file": "Anexos/Apresentacoes/Apresentacao_Intermedia2.pdf",
+                "icon": "bi-file-earmark-slides"
+            },
+            {
+                "title": "Apresentação Final",
+                "description": "Resultados (Julho 2025)",
+                "file": "https://www.canva.com/design/DAGr2_hzTn0/jG4W--aqJqVwfWSJSFS1iQ/view?utm_content=DAGr2_hzTn0&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hd68c503fea",
+                "icon": "bi-file-earmark-slides"
+            }
+        ],
+        "reports": [
+            {
+                "title": "Relatório anteprojeto - Kauã Silva",
+                "file": "Anexos/Relatorios/Anteprojeto_Kaua.pdf",
+                "description": "Especificações iniciais (Outubro 2024)",
+                "icon": "bi bi-file-earmark-pdf"
+            },
+            {
+                "title": "Relatório intermédio #1 - Kauã Silva",
+                "file": "Anexos/Relatorios/Relatorio_intermedio1_Kaua.pdf",
+                "description": "Avanço do desenvolvimento (Janeiro 2025)",
+                "icon": "bi bi-file-earmark-pdf"
+            },
+            {
+                "title": "Relatório Final - Kauã Silva",
+                "file": "Anexos/Relatorios/Relatorio_final_Kaua.pdf",
+                "description": "Documentação completa (Junho 2025)",
+                "icon": "bi bi-file-earmark-pdf"
+            },
+            {
+                "title": "Relatório anteprojeto - Rúben Arroz",
+                "file": "Anexos/Relatorios/Anteprojeto_Ruben.pdf",
+                "description": "Especificações iniciais (Outubro 2024)",
+                "icon": "bi bi-file-earmark-pdf"
+            },
+            {
+                "title": "Relatório intermédio #1 - Rúben Arroz",
+                "file": "Anexos/Relatorios/Relatorio_intermedio1_Ruben.pdf",
+                "description": "Avanço do desenvolvimento (Janeiro 2025)",
+                "icon": "bi bi-file-earmark-pdf"
+            },
+            {
+                "title": "Relatório Final - Rúben Arroz",
+                "file": "Anexos/Relatorios/Relatorio_final_Ruben.pdf",
+                "description": "Documentação completa (Junho 2025)",
+                "icon": "bi bi-file-earmark-pdf"
+            }
+        ],
+        "others": [
+            {
+                "title": "Pedido de Orçamento",
+                "description": "Orçamento para roupa personalizada",
+                "file": "Anexos/Outros/Pedido_Orcamento.pdf",
+                "icon": "bi-file-earmark"
+            }
+        ]
+    },
+    "timeline": {
+        "planeamento": {
+            "title": "Fase de Planeamento",
+            "date": "Novembro 2024",
+            "description": "Foi feita a definição do objetivo principal do projeto, a divisão de tarefas entre os membros da equipa e o planeamento geral das várias componentes a desenvolver, incluindo o mapa do jogo, a temática visual, os limites técnicos, as plataformas visadas e os primeiros esboços do cronograma.",
+            "image": "Imagens/Random/Drift2.png"
+        },
+        "design": {
+            "title": "Fase de Design",
+            "date": "Dezembro - Junho 2024/2025",
+            "description": "Nesta fase foi desenvolvida a identidade visual global do projeto: logótipo, paleta de cores, tipografia, estilo do website, roupas digitais e elementos gráficos para o jogo. Foram criados mockups, wireframes e conceitos iniciais tanto para o site como para o ambiente do jogo, com base em ferramentas de design modernas.",
+            "image": "Imagens/Random/Drift2.png"
+        },
+        "prototipacao": {
+            "title": "Fase de Funcionalidades",
+            "date": "Abril - Junho 2025",
+            "description": "Iniciou-se a implementação das principais funcionalidades. No jogo: sistema de corridas, economia fictícia, loja de veículos, e exploração do mapa. No website: desenvolvimento do sistema de autenticação, loja online e integração com os conteúdos do jogo e redes sociais. A funcionalidade foi priorizada à frente da aparência final.",
+            "image": "Imagens/Random/Drift2.png"
+        },
+        "testes": {
+            "title": "Fase de Testes",
+            "date": "Abril - Junho 2025",
+            "description": "Foram realizados testes regulares à jogabilidade, fluidez e compatibilidade do jogo em diferentes dispositivos. No site, foram avaliadas a navegação, responsividade e o correto funcionamento de cada componente. Foram detetados e corrigidos erros, e aplicadas melhorias com base no feedback obtido durante os testes internos.",
+            "image": "Imagens/Random/Drift2.png"
+        },
+        "polimento": {
+            "title": "Fase de Polimento",
+            "date": "Junho 2025",
+            "description": "Todos os elementos do projeto foram revistos e refinados. O foco esteve na otimização final do desempenho do jogo, no ajuste visual dos menus e interfaces, e na preparação para o lançamento público. Foram ainda organizados os materiais de divulgação e concluídas as últimas revisões no site e redes sociais.",
+            "image": "Imagens/Random/Drift2.png"
+        }
+    }
+}

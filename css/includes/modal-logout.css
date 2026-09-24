@@ -1,0 +1,121 @@
+:root {
+    --color-yellow: #ffc107;
+    --color-yellow-hover: #ffca2c;
+    --color-gray-900: #111111;
+    --color-gray-800: #1f1f1f;
+    --color-gray-700: #2d2d2d;
+    --color-gray-600: #4a4a4a;
+    --color-gray-500: #666666;
+    --color-gray-400: #888888;
+    --color-white: #ffffff;
+}
+
+/* Modal Backdrop: transparente quando visível */
+.modal-backdrop.show {
+    opacity: 0 !important;
+}
+
+.modal-backdrop {
+    z-index: auto;
+}
+
+/* ========== Logout Modal – Conteúdo, Borda e Layout ========== */
+.logout-modal-content {
+    background-color: var(--color-gray-800);
+    border: none;
+    border-radius: 0.5rem;
+    color: var(--color-white);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+.logout-modal-border {
+    border: 1px solid var(--color-yellow);
+    border-radius: 0.7rem;
+}
+
+/* Cabeçalho */
+.logout-modal-header {
+    border-bottom: 1px solid var(--color-gray-700);
+    padding: 1rem 1.5rem;
+}
+
+.logout-modal-header .modal-title {
+    color: var(--color-white);
+}
+
+/* Corpo */
+.logout-modal-body {
+    padding: 1.5rem;
+    color: var(--color-gray-400);
+}
+
+/* Rodapé */
+.logout-modal-footer {
+    border-top: 1px solid var(--color-gray-700);
+    padding: 1rem 1.5rem;
+}
+
+/* Botão Fechar (×) dentro do modal */
+.logout-btn-close-white {
+    filter: invert(1);
+    opacity: 0.7;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.logout-btn-close-white:hover {
+    opacity: 1;
+}
+
+/* ========== Botões ========== */
+
+/* Cancelar */
+.logout-btn-cancel {
+    background-color: transparent;
+    border-color: var(--color-yellow);
+    color: var(--color-yellow);
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.logout-btn-cancel:hover {
+    background-color: transparent;
+    border-color: var(--color-white);
+    color: var(--color-white);
+}
+
+/* Confirmar logout */
+.logout-btn-confirm-logout {
+    background-color: var(--color-yellow);
+    color: var(--color-gray-900);
+    font-weight: 600;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.logout-btn-confirm-logout:hover {
+    background-color: var(--color-yellow-hover);
+    text-decoration: none;
+    color: var(--color-gray-900);
+}
+
+/* ========== Responsividade (até 768px) ========== */
+@media (max-width: 768px) {
+    .logout-modal-content {
+        width: 100%;
+        max-width: 95%;
+    }
+
+    .logout-modal-header,
+    .logout-modal-footer {
+        padding: 1rem;
+    }
+
+    .logout-modal-border {
+        border-radius: 0.5rem;
+    }
+}
+
+/* Box-model global (sem alterações) */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}

@@ -1,0 +1,538 @@
+/* Estilos específicos para a página de cadastro */
+
+/* Centralização do conteúdo */
+.container {
+    display: flex;
+    align-items: center;
+    min-height: 200vh;
+    padding: 2rem 1rem;
+}
+
+/* Campo de senha e indicador de força */
+.password-field {
+    position: relative;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    font-size: 1rem;
+    z-index: 7;
+}
+
+.password-toggle:hover,
+.password-toggle:focus {
+    color: var(--color-yellow);
+}
+
+#registerForm {
+    padding: 1.5rem;
+    padding-bottom: 0;
+}
+
+/* Animação para o formulário */
+#registerForm .form-floating {
+    animation: fadeIn 0.5s ease-out forwards;
+    opacity: 0;
+}
+
+#registerForm .form-floating:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+#registerForm .form-floating:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+#registerForm .form-floating:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+#registerForm .form-floating:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+#registerForm .password-requirements {
+    animation: fadeIn 0.5s ease-out forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+}
+
+#registerForm .btn-primary {
+    animation: fadeIn 0.5s ease-out forwards;
+    animation-delay: 0.6s;
+    opacity: 0;
+}
+
+/* Indicador de força da senha */
+.password-strength-container {
+    margin-top: 0.5rem;
+}
+
+.password-strength-wrapper {
+    height: 6px;
+    border-radius: 3px;
+    background-color: #e9ecef;
+    overflow: hidden;
+    margin-bottom: 0.25rem;
+}
+
+.dark-mode .password-strength-wrapper {
+    background-color: #2d3339;
+}
+
+.password-strength-bar {
+    height: 100%;
+    width: 0;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.strength-text {
+    display: flex;
+    justify-content: space-between;
+    color: var(--text-muted);
+    font-size: 0.75rem;
+}
+
+.strength-weak {
+    width: 33%;
+    background-color: #dc3545;
+}
+
+.strength-medium {
+    width: 66%;
+    background-color: #ffc107;
+}
+
+.strength-strong {
+    width: 100%;
+    background-color: #28a745;
+}
+
+/* Requisitos de senha */
+.password-requirements {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-radius: 0.5rem;
+}
+
+.dark-mode .form-text {
+    color: white;
+}
+
+.dark-mode .password-requirements {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+.password-requirements ul {
+    list-style: none;
+    margin-bottom: 0;
+}
+
+.password-requirements li {
+    margin-bottom: 0.25rem;
+    display: flex;
+    align-items: center;
+}
+
+.dark-mode .password-requirements ul {
+    color: white;
+    list-style: none;
+    margin-bottom: 0;
+}
+
+.dark-mode .password-requirements li {
+    color: white;
+    margin-bottom: 0.25rem;
+    display: flex;
+    align-items: center;
+}
+
+
+.check-icon {
+    margin-right: 0.5rem;
+    display: inline-flex;
+}
+
+.check-valid i {
+    color: var(--color-success);
+}
+
+.check-invalid i {
+    color: var(--color-danger);
+}
+
+/* Animação para logo */
+.logo-container {
+    position: relative;
+    margin-bottom: 2rem;
+    animation: logoReveal 0.8s ease-out forwards;
+}
+
+@keyframes logoReveal {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Efeito de hover no botão */
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .btn-primary:hover {
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+/* Responsividade */
+@media (max-width: 576px) {
+
+    .password-requirements li {
+        font-size: 0.7rem;
+    }
+}
+
+/* ==========================================================================
+   Cadastro.css – apenas margens verticais (margin‐top / margin‐bottom) 
+   aplicáveis ao .auth-card da página de Cadastro
+   Card de cadastro costuma ser mais alto, então usamos percentuais um pouco maiores.
+   ========================================================================== */
+
+/* ==========================================================================
+   Media‐queries específicas por modelo de telemóvel (margin‐top/​bottom com !important)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   iPhone SE (1ª/2ª geração) – largura exata: 375px, orientação retrato
+   -------------------------------------------------------------------------- */
+@media only screen and (min-width: 375px) and (max-width: 375px) and (orientation: portrait) {
+    .auth-card {
+        margin-top: 130% !important;
+        margin-bottom: 10% !important;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   iPhone SE (1ª/2ª geração) – largura exata: 667px, orientação paisagem
+   -------------------------------------------------------------------------- */
+@media only screen and (min-width: 667px) and (max-width: 667px) and (orientation: landscape) {
+    .auth-card {
+        margin-top: 50% !important;
+        margin-bottom: 8% !important;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Samsung Galaxy S8+ – largura exata: 360px
+   -------------------------------------------------------------------------- */
+@media only screen and (min-width: 360px) and (max-width: 360px) {
+    .auth-card {
+        margin-top: 130% !important;
+        margin-bottom: 10% !important;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   iPhone 12 Pro (largura exata: 390px)
+   -------------------------------------------------------------------------- */
+@media only screen and (min-width: 390px) and (max-width: 390px) {
+    .auth-card {
+        margin-top: 70% !important;
+        margin-bottom: 10% !important;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Pixel 7 – largura exata: 393px
+   -------------------------------------------------------------------------- */
+@media only screen and (min-width: 393px) and (max-width: 393px) {
+    .auth-card {
+        margin-top: 55% !important;
+        margin-bottom: 9% !important;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   iPhone XR / iPhone 11 – largura exata: 414px
+   -------------------------------------------------------------------------- */
+@media only screen and (min-width: 414px) and (max-width: 414px) {
+    .auth-card {
+        margin-top: 50% !important;
+        margin-bottom: 10% !important;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Samsung Galaxy S20 Ultra e talvez Pixel 7 – largura exata: 412px
+   -------------------------------------------------------------------------- */
+@media only screen and (min-width: 412px) and (max-width: 412px) {
+    .auth-card {
+        margin-top: 50% !important;
+        margin-bottom: 10% !important;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   iPhone 14 Pro Max – largura exata: 430px
+   -------------------------------------------------------------------------- */
+@media only screen and (min-width: 430px) and (max-width: 430px) {
+    .auth-card {
+        margin-top: 65% !important;
+        margin-bottom: 10% !important;
+    }
+}
+
+/* ==========================================================================
+   Media-queries específicas para tablets (margin-top/​bottom com !important)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   iPad Mini (largura exata: 768px, orientação retrato)
+   -------------------------------------------------------------------------- */
+/* @media only screen and (min-width: 768px) and (max-width: 768px) and (orientation: portrait) {
+    .auth-card {
+        margin-top: 40% !important;
+        margin-bottom: 10% !important;
+    }
+} */
+
+/* --------------------------------------------------------------------------
+   iPad Mini (largura exata: 1024px, orientação paisagem)
+   -------------------------------------------------------------------------- */
+/* @media only screen and (min-width: 1024px) and (max-width: 1024px) and (orientation: landscape) {
+    .auth-card {
+        margin-top: 25% !important;
+        margin-bottom: 8% !important;
+    }
+}
+ */
+/* --------------------------------------------------------------------------
+   iPad Air (largura exata: 820px, orientação retrato)
+   -------------------------------------------------------------------------- */
+/* @media only screen and (min-width: 820px) and (max-width: 820px) and (orientation: portrait) {
+    .auth-card {
+        margin-top: 38% !important;
+        margin-bottom: 10% !important;
+    }
+} */
+
+/* --------------------------------------------------------------------------
+   iPad Air (largura exata: 1180px, orientação paisagem)
+   -------------------------------------------------------------------------- */
+/* @media only screen and (min-width: 1180px) and (max-width: 1180px) and (orientation: landscape) {
+    .auth-card {
+        margin-top: 22% !important;
+        margin-bottom: 8% !important;
+    }
+} */
+
+/* --------------------------------------------------------------------------
+   iPad Pro 11" (largura exata: 834px, orientação retrato)
+   -------------------------------------------------------------------------- */
+@media only screen and (min-width: 834px) and (max-width: 834px) and (orientation: portrait) {
+    .auth-card {
+        margin-top: 35% !important;
+        margin-bottom: 9% !important;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   iPad Pro 11" (largura exata: 1194px, orientação paisagem)
+   -------------------------------------------------------------------------- */
+@media only screen and (min-width: 1194px) and (max-width: 1194px) and (orientation: landscape) {
+    .auth-card {
+        margin-top: 20% !important;
+        margin-bottom: 7% !important;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   iPad Pro 12.9" (largura exata: 1024px, orientação retrato)
+   -------------------------------------------------------------------------- */
+@media only screen and (min-width: 1024px) and (max-width: 1024px) and (orientation: portrait) {
+    .auth-card {
+        margin-top: 32% !important;
+        margin-bottom: 8% !important;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   iPad Pro 12.9" (largura exata: 1366px, orientação paisagem)
+   -------------------------------------------------------------------------- */
+@media only screen and (min-width: 1366px) and (max-width: 1366px) and (orientation: landscape) {
+    .auth-card {
+        margin-top: 18% !important;
+        margin-bottom: 6% !important;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Surface Pro 7 (largura exata: 912px, orientação retrato)
+   -------------------------------------------------------------------------- */
+/* @media only screen and (min-width: 912px) and (max-width: 912px) and (orientation: portrait) {
+    .auth-card {
+        margin-top: 36% !important;
+        margin-bottom: 9% !important;
+    }
+} */
+
+/* --------------------------------------------------------------------------
+   Surface Pro 7 (largura exata: 1366px, orientação paisagem)
+   -------------------------------------------------------------------------- */
+@media only screen and (min-width: 1366px) and (max-width: 1366px) and (orientation: landscape) {
+    .auth-card {
+        margin-top: 20% !important;
+        margin-bottom: 7% !important;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Surface Duo (largura exata: 540px, orientação retrato)
+   -------------------------------------------------------------------------- */
+@media only screen and (min-width: 540px) and (max-width: 540px) and (orientation: portrait) {
+    .auth-card {
+        margin-top: 100% !important;
+        margin-bottom: 10% !important;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Surface Duo (largura exata: 720px, orientação paisagem)
+   -------------------------------------------------------------------------- */
+@media only screen and (min-width: 720px) and (max-width: 720px) and (orientation: landscape) {
+    .auth-card {
+        margin-top: 30% !important;
+        margin-bottom: 8% !important;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Galaxy Z Fold 5 – modo retrato (largura exata: 344px)
+   -------------------------------------------------------------------------- */
+@media only screen and (min-width: 344px) and (max-width: 344px) and (orientation: portrait) {
+    .auth-card {
+        margin-top: 55% !important;
+        margin-bottom: 10% !important;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Galaxy Z Fold 5 – modo paisagem (largura exata: 882px)
+   -------------------------------------------------------------------------- */
+@media only screen and (min-width: 882px) and (max-width: 882px) and (orientation: landscape) {
+    .auth-card {
+        margin-top: 20% !important;
+        margin-bottom: 8% !important;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Samsung Galaxy Tab S8+ (largura exata: 800px, orientação retrato)
+   -------------------------------------------------------------------------- */
+@media only screen and (min-width: 800px) and (max-width: 800px) and (orientation: portrait) {
+    .auth-card {
+        margin-top: 38% !important;
+        margin-bottom: 9% !important;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Samsung Galaxy Tab S8+ (largura exata: 1280px, orientação paisagem)
+   -------------------------------------------------------------------------- */
+@media only screen and (min-width: 1280px) and (max-width: 1280px) and (orientation: landscape) {
+    .auth-card {
+        margin-top: 22% !important;
+        margin-bottom: 7% !important;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Samsung Galaxy Tab A7 (largura exata: 800px, orientação retrato)
+   -------------------------------------------------------------------------- */
+@media only screen and (min-width: 800px) and (max-width: 800px) and (orientation: portrait) and (device-width: 800px)
+/* focado especificamente no Tab A7 */
+    {
+    .auth-card {
+        margin-top: 40% !important;
+        margin-bottom: 10% !important;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Samsung Galaxy Tab A7 (largura exata: 1280px, orientação paisagem)
+   -------------------------------------------------------------------------- */
+@media only screen and (min-width: 1280px) and (max-width: 1280px) and (orientation: landscape) and (device-width: 1280px)
+/* focado especificamente no Tab A7 */
+    {
+    .auth-card {
+        margin-top: 24% !important;
+        margin-bottom: 8% !important;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Asus ZenBook Fold (largura exata: 768px, orientação retrato)
+   -------------------------------------------------------------------------- */
+@media only screen and (min-width: 768px) and (max-width: 768px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1.5) {
+    .auth-card {
+        margin-top: 40% !important;
+        margin-bottom: 10% !important;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Asus ZenBook Fold (largura exata: 1366px, orientação paisagem)
+   -------------------------------------------------------------------------- */
+@media only screen and (min-width: 1366px) and (max-width: 1366px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1.5) {
+    .auth-card {
+        margin-top: 20% !important;
+        margin-bottom: 6% !important;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   6) Laptops / Desktops médios ( ↑ 1024×768, 1280×800, 1366×768) 
+   largura de 992px até 1199px
+   -------------------------------------------------------------------------- */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .auth-card {
+        margin-top: 0% !important;
+        margin-bottom: 0% !important;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   7) Monitores grandes ( ↑ 1920×1080, 2560×1440) 
+   largura ≥ 1200px
+   -------------------------------------------------------------------------- */
+@media (min-width: 1200px) {
+    .auth-card {
+        margin-top: 50% !important;
+        margin-bottom: 10% !important;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   8) Ultrawide / TVs ( ↑ ≥ 1600px largura) 
+   -------------------------------------------------------------------------- */
+@media (min-width: 1600px) {
+    .auth-card {
+        margin-top: 0% !important;
+        margin-bottom: 0% !important;
+    }
+}

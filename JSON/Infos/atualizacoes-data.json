@@ -1,0 +1,58 @@
+{
+    "updates": [
+        {
+            "date": "14/05/2025",
+            "title": "Sistema de Notificações com Permissão Nativa",
+            "text": "Lançamento de uma nova página dedicada e início da implementação de um sistema de notificações push nativas do navegador, com interface de consentimento integrada e botão de consulta de estado na página de suporte.",
+            "image": "Imagens/Atualizacoes/print1.png"
+        },
+        {
+            "date": "13/05/2025",
+            "title": "Widget de Comunidade KR Legends",
+            "text": "Adicionado widget interativo na página da comunidade, exibindo informações adicionais sobre o universo do jogo KR Legends no Roblox através de novo método de integração de dados.",
+            "image": "Imagens/Atualizacoes/print1.png"
+        },
+        {
+            "date": "07/05/2025",
+            "title": "Cabeçalho e Estado de Jogo em Tempo Real",
+            "text": "Atualização do cabeçalho com novas secções e páginas, e aperfeiçoamento da secção de estado do jogo com dados em tempo real extraídos diretamente do Roblox Studio.",
+            "image": "Imagens/Atualizacoes/print1.png"
+        },
+        {
+            "date": "06/05/2025",
+            "title": "Melhorias Gerais no Website",
+            "text": "Finalização da página “PAP” e otimizações na área de “Atualizações”; implementação de favicons específicos para diferentes navegadores e sistemas operativos.",
+            "image": "Imagens/Atualizacoes/print1.png"
+        },
+        {
+            "date": "01/05/2025",
+            "title": "Secção de Estado do Jogo no Suporte",
+            "text": "Introduzida secção interativa na página de suporte com cards que exibem o estado do servidor do KR Legends, obtendo métricas diretamente da API do Roblox.",
+            "image": "Imagens/Atualizacoes/print1.png"
+        },
+        {
+            "date": "30/04/2025",
+            "title": "Dropdown de Idiomas e Banner de Cookies",
+            "text": "Implementação de menu de seleção de idiomas, novas páginas de conteúdo, banner de cookies conforme regulamento GDPR e carrinho de compras com persistência via cookies.",
+            "image": "Imagens/Atualizacoes/print1.png"
+        },
+        {
+            "date": "20/04/2025",
+            "title": "Integração de JSON para Dados Dinâmicos",
+            "text": "Início do uso de arquivos JSON para alimentar dinamicamente secções do site, preparando o terreno para cards e widgets de estatísticas em tempo real.",
+            "image": "Imagens/Atualizacoes/print1.png"
+        },
+        {
+            "date": "07/04/2025",
+            "title": "Grande Atualização Estética",
+            "text": "Reestruturação visual do cabeçalho, hero e rodapé, introdução de animações básicas em JavaScript e refinamento na forma de apresentação de conteúdo.",
+            "image": "Imagens/Atualizacoes/print1.png"
+        },
+        {
+            "date": "25/01/2025",
+            "title": "Lançamento da Primeira Versão",
+            "text": "Primeira versão do site ao público: página inicial com cabeçalho, rodapé, hero simples e conteúdo estático, estabelecendo a base para futuras funcionalidades.",
+            "image": "Imagens/Atualizacoes/print1.png"
+        }
+    ]
+}

@@ -1,0 +1,166 @@
+:root {
+    --color-yellow: #ffc107;
+    --color-yellow-hover: #ffca2c;
+    --color-gray-900: #111111;
+    --color-gray-800: #1f1f1f;
+    --color-gray-700: #2d2d2d;
+    --color-gray-600: #4a4a4a;
+    --color-gray-500: #666666;
+    --color-gray-400: #888888;
+    --color-white: #ffffff;
+    --profile-menu-transition: all 0.3s ease;
+
+}
+
+/* ========== Profile Menu Container ========== */
+.profile-menu-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    padding: 0.25rem;
+    border-radius: 2rem;
+    transition: var(--profile-menu-transition);
+}
+
+/* Nome do utilizador na dropdown */
+.profile-menu-container .profile-name {
+    color: var(--color-yellow);
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--profile-menu-transition);
+    white-space: nowrap;
+    max-width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+}
+
+.profile-menu-container .profile-name:hover,
+.profile-menu-container .profile-name:focus {
+    color: var(--color-white);
+    text-decoration: none;
+    transform: translateY(-1px);
+}
+
+/* ========== Avatar (Imagem) ========== */
+.profile-menu-container .profile-avatar-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--color-gray-700);
+    transition: var(--profile-menu-transition);
+    position: relative;
+}
+
+.profile-menu-container .profile-avatar-trigger:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 1px rgba(255, 193, 7, 0.3);
+    pointer-events: none;
+}
+
+.profile-menu-container .profile-avatar-trigger img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: var(--profile-menu-transition);
+}
+
+.profile-menu-container .profile-avatar-trigger:hover,
+.profile-menu-container .profile-avatar-trigger:focus {
+    border-color: var(--color-yellow);
+    transform: scale(1.05);
+    box-shadow: 0 0 0 4px rgba(255, 193, 7, 0.15);
+}
+
+/* ========== Dropdown Menu ========== */
+.profile-menu-container .dropdown-menu {
+    background-color: #000;
+    border: 1px solid #ffca2c;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+    margin-top: 0.75rem !important;
+}
+
+.profile-menu-container .dropdown-menu .dropdown-item.text-danger:hover {
+    color: black !important;
+    /* Hover para o item Terminar Sessão */
+}
+
+
+
+/* ========== Responsividade - Ajustes em dispositivos menores ========== */
+@media (max-width: 768px) {
+
+    .profile-menu-container {
+        gap: 0.5rem;
+        padding: 0.25rem;
+    }
+
+    /* Avatar (imagem) */
+    .profile-menu-container .profile-avatar-trigger {
+        width: 32px;
+        height: 32px;
+    }
+
+    /* Nome do Utilizador */
+    .profile-menu-container .profile-name {
+        max-width: 100px;
+        font-size: 0.85rem;
+    }
+}
+
+/* =============================== */
+/* Ícone Administrativo (Font Awesome) */
+/* =============================== */
+
+/* 1) Container <a> que envolve o <i> Font Awesome */
+.profile-menu-container .profile-admin-icon {
+    text-decoration: none;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    overflow: hidden;
+    color: var(--color-yellow);
+    transition: var(--profile-menu-transition);
+}
+
+/* 2) O próprio ícone (<i class="fa-solid …">) */
+.profile-menu-container .profile-admin-icon i {
+    font-size: 1.25rem;
+    line-height: 1;
+}
+
+/* 3) Hover no container (<a>) */
+.profile-menu-container .profile-admin-icon:hover {
+    cursor: pointer;
+    color: var(--color-yellow-hover);
+    transform: scale(1.05);
+}
+
+/* 4) Responsividade*/
+@media (max-width: 768px) {
+    .profile-menu-container .profile-admin-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .profile-menu-container .profile-admin-icon i {
+        font-size: 1rem;
+    }
+}

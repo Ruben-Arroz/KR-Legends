@@ -1,0 +1,302 @@
+/*--------------------------------------------------------------
+1. Tipografia e Elementos Básicos
+--------------------------------------------------------------*/
+/* Define estilos para títulos e subtítulos, proporcionando uma tipografia consistente */
+h2 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+    margin-top: 5rem;
+    color: #ffc107;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+p.subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 4rem;
+    color: #ccc;
+}
+
+/*--------------------------------------------------------------
+11. Animações (Keyframes e classes auxiliares)
+--------------------------------------------------------------*/
+/* Define animações para efeitos visuais como pulse, fadeIn, slideUp e revelação de título */
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 0.1;
+    }
+
+    50% {
+        opacity: 0.2;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-title {
+    opacity: 0;
+    animation: titleReveal 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes titleReveal {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*--------------------------------------------------------------
+12. FAQ Section, Accordion e Sidebar
+--------------------------------------------------------------*/
+/* Estiliza seções adicionais como FAQ, acordeão customizado e sidebar */
+.faq-section {
+    padding: 4rem 0;
+}
+
+.faq-title {
+    color: #ffc107;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 4.9rem;
+}
+
+.accordion-item {
+    background-color: transparent;
+    border: 1px solid rgba(255, 193, 7, 0.2);
+    margin-bottom: 1rem;
+}
+
+.accordion-button {
+    background-color: rgba(26, 26, 26, 0.5);
+    color: #ffc107;
+    font-weight: 600;
+    border: none;
+    padding: 1.25rem;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: rgba(26, 26, 26, 0.8);
+    color: #ffc107;
+}
+
+.accordion-button::after {
+    filter: invert(84%) sepia(29%) saturate(4188%) hue-rotate(359deg) brightness(103%) contrast(104%);
+}
+
+.accordion-body {
+    background-color: rgba(26, 26, 26, 0.3);
+    color: #aaa;
+    padding: 1.25rem;
+}
+
+.sidebar {
+    position: sticky;
+    top: 20rem;
+}
+
+.sidebar-box {
+    background-color: rgba(26, 26, 26, 0.5);
+    border: 1px solid rgba(255, 193, 7, 0.2);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.sidebar-box h4 {
+    color: #ffc107;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.sidebar-box p {
+    color: #aaa;
+    margin-bottom: 1.25rem;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    border: none;
+    color: #000;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.btn-warning:hover {
+    background-color: #ffca2c;
+    transform: translateY(-2px);
+}
+
+/*--------------------------------------------------------------
+13. Media Queries (Responsividade)
+--------------------------------------------------------------*/
+/* Estilos responsivos para adaptar o layout em dispositivos móveis */
+@media (max-width: 768px) {
+
+    .modal {
+        width: 50%;
+        height: 50%;
+        max-height: 275px;
+        max-width: 300px;
+        padding: 1.5rem;
+        margin: 1rem;
+        margin-top: 75px;
+    }
+
+    .modal-overlay.active .modal {
+        height: 80%;
+    }
+
+    .modal h3 {
+        margin-top: 1.6rem;
+        margin-bottom: 0;
+        font-size: 1.5rem;
+        padding-bottom: -30px;
+    }
+
+    .modal p {
+        font-size: 1rem;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+    .close-modal {
+        top: 0.3rem;
+        right: 0.4rem;
+        width: 39px;
+        height: 39px;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal {
+        width: 95%;
+        padding: 1rem;
+    }
+
+    .modal h3 {
+        font-size: 1.3rem;
+    }
+
+    .modal p {
+        font-size: 0.9rem;
+    }
+}
+
+.btn.btn-outline-secondary.px-4:hover {
+    color: #fff;
+    border-color: #ffc107;
+    background-color: transparent;
+}
+
+/* Espaçamento entre itens de lista nos faq */
+.accordion-body ul {
+    padding-left: 1.25rem;
+    margin: 0;
+}
+
+.accordion-body ul li {
+    margin-bottom: 0.75rem;
+}
+
+.accordion-body ul li:last-child {
+    margin-bottom: 0;
+}
+
+/* Geral da secção */
+.game-status-section {
+    color: #fff;
+}
+
+/* Título central com transparência */
+.section-title {
+    font-size: 2.7rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: transparent;
+    border-bottom: 2px solid #ffc107;
+    /* linha amarela */
+    padding-bottom: 1.4rem;
+    margin-bottom: 5rem;
+}
+
+/* Container do ping */
+.ping-container {
+    background-color: rgba(26, 26, 26, 0.5);
+    color: #fff;
+    text-align: center;
+}
+
+/* Card de estado */
+.status-card {
+    background-color: rgba(26, 26, 26, 0.5);
+    color: #fff;
+    border: 1px solid #444;
+    border-radius: 12px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.status-card:hover {
+    transform: translateY(-3px);
+}
+
+/* Espaçamento entre tópicos dos cards */
+.status-card p {
+    line-height: 1.6;
+}
+
+.subtle-icon {
+    font-size: 0.9em;
+    color: #ffc107;
+    /* amarelo linha */
+    margin-left: 6px;
+    vertical-align: middle;
+    background: transparent;
+    border-radius: 50%;
+    transition: color 0.2s ease;
+    opacity: 0.85;
+}
+
+.subtle-icon:hover {
+    color: #ffde59;
+    opacity: 1;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .status-card {
+        margin-bottom: 1rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+}

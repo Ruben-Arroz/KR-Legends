@@ -1,0 +1,307 @@
+/* =================================
+   1. VARIÁVEIS E CONFIGURAÇÕES
+   ================================= */
+:root {
+    /* Cores Principais */
+    --color-yellow: #ffc107;
+    --color-yellow-hover: #ffca2c;
+    --color-black: #000000;
+    --color-white: #ffffff;
+    --color-gray-900: #111111;
+    --color-gray-800: #1f1f1f;
+    --color-gray-700: #2d2d2d;
+    --color-gray-600: #4a4a4a;
+    --color-gray-500: #666666;
+    --color-gray-400: #888888;
+
+    /* Dimensões */
+    --adm-header-height: 90px;
+    --adm-footer-height: 60px;
+    --adm-sidebar-width: 280px;
+    --adm-border-radius: 8px;
+    --adm-box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 8px;
+    --adm-transition-fast: 0.2s ease;
+
+    --scrollbar-track-color: rgba(17, 17, 17, 0.3);   /* cor do trilho */
+    --scrollbar-thumb-color: rgba(255, 193, 7, 0.6);  /* cor do polegar */
+    --scrollbar-thumb-hover-color: rgba(255, 193, 7, 0.8);
+    --scrollbar-arrows-color: rgba(200, 200, 200, 0.7);/* cor das setas */
+}
+
+/* =================================
+   2. RESET E CONFIGURAÇÕES GLOBAIS
+   ================================= */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    min-height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+/* =================================
+   3. LAYOUT PRINCIPAL
+   ================================= */
+.adm-wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* =================================
+   4. SIDEBAR
+   ================================= */
+.adm-sidebar {
+    margin-top: 5%;
+    background-color: black;
+    color: var(--color-white);
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    top: 9.5%;
+    left: 0;
+    width: var(--adm-sidebar-width);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.adm-sidebar-header {
+    padding: 1.5rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    background-color: var(--color-gray-900);
+    border-bottom: 1px solid var(--color-gray-700);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.adm-sidebar-header-a {
+    text-decoration: none;
+    color: var(--color-white);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.adm-sidebar-nav {
+    list-style: none;
+    margin: 0;
+    padding: 1rem 0;
+}
+
+.adm-sidebar-section {
+    margin-bottom: 1.5rem;
+}
+
+.adm-sidebar-section-name {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--color-gray-400);
+}
+
+.adm-sidebar-item {
+    display: flex;
+    align-items: center;
+    padding: 0.875rem 1.5rem;
+    font-size: 0.95rem;
+    color: var(--color-white);
+    text-decoration: none;
+    transition: all var(--adm-transition-fast);
+    border-left: 3px solid transparent;
+}
+
+.adm-sidebar-item i {
+    margin-right: 0.875rem;
+    font-size: 1.25rem;
+    color: var(--color-yellow);
+    transition: transform var(--adm-transition-fast);
+}
+
+.adm-sidebar-item:hover {
+    background-color: var(--color-gray-800);
+    color: var(--color-yellow);
+    border-left-color: var(--color-yellow);
+}
+
+.adm-sidebar-item:hover i {
+    transform: translateX(2px);
+}
+
+.adm-sidebar-item.active {
+    background-color: var(--color-gray-800);
+    color: var(--color-yellow);
+    border-left-color: var(--color-yellow);
+    font-weight: 500;
+}
+
+.adm-sidebar-item.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+
+
+/* =================================
+   6. RESPONSIVIDADE
+   ================================= */
+@media (max-width: 1200px) {
+    :root {
+        --adm-sidebar-width: 250px;
+    }
+}
+
+@media (max-width: 992px) {
+    .adm-main-content {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --adm-sidebar-width: 100%;
+    }
+
+    .adm-sidebar {
+        transform: translateX(-100%);
+    }
+
+    .adm-sidebar.active {
+        transform: translateX(0);
+    }
+
+    .adm-main-content {
+        margin-left: 0;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .adm-main-content {
+        padding: 1rem 0.75rem;
+    }
+}
+
+/* =================================
+   7. UTILITÁRIOS
+   ================================= */
+.adm-scroll-custom::-webkit-scrollbar {
+    width: 8px;
+}
+
+.adm-scroll-custom::-webkit-scrollbar-track {
+    background: var(--color-gray-900);
+}
+
+.adm-scroll-custom::-webkit-scrollbar-thumb {
+    background: var(--color-gray-700);
+    border-radius: 4px;
+}
+
+.adm-scroll-custom::-webkit-scrollbar-thumb:hover {
+    background: var(--color-gray-600);
+}
+
+/* Header positioning */
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1001;
+}
+
+/* Footer positioning */
+footer {
+    position: relative;
+    width: 100%;
+    background-color: var(--color-black);
+}
+
+#page {
+    display: flex;
+    gap: 40px;
+}
+
+@media (min-width: 1024px) and (max-width: 1540px) {
+    .adm-sidebar {
+        margin-top: 6%;
+    }
+}
+
+/* ============================
+   1) TRACK (trilho) do scrollbar
+   ============================ */
+::-webkit-scrollbar-track {
+    background-color: var(--scrollbar-track-color);
+    box-sizing: border-box;
+    /* Caso queira borda ou “espessura” adicional, especifique aqui: */
+    /* border-left: 1px solid rgba(0,0,0,0.1); */
+}
+
+/* ============================
+   2) THUMB (polegar) do scrollbar
+   ============================ */
+::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb-color);
+    border-radius: 3px;
+    /* Se desejar, adicione uma fina borda para destacar: */
+    /* border: 1px solid rgba(0,0,0,0.2); */
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--scrollbar-thumb-hover-color);
+}
+
+/* ===========================================
+   3) BUTTONS (setas) – definindo cor e estilo
+   =========================================== */
+/* 3.1) Tamanho geral das setas (botões) */
+::-webkit-scrollbar-button {
+    display: block;          /* exibe as setas normalmente */
+    width: 1px;              /* largura da área da seta */
+    height: 1px;             /* altura da área da seta */
+    background-color: transparent !important; /* base transparente para receber cor da seta */
+}
+
+/* 3.2) Cor do ícone da seta (elemento interno) */
+/* Em WebKit, as setas são geradas pelo sistema, mas você pode “colorir” a área de fundo 
+   para dar contraste. Se quiser substituir por um SVG ou shape, use background-image. */
+::-webkit-scrollbar-button:vertical:decrement {
+    /* seta para cima */
+    background-color: var(--scrollbar-arrows-color);
+    /* Caso queira uma forma triangular, pode usar clip-path, por exemplo: */
+    /* clip-path: polygon(50% 0%, 0% 100%, 100% 100%); */
+}
+::-webkit-scrollbar-button:vertical:increment {
+    /* seta para baixo */
+    background-color: var(--scrollbar-arrows-color);
+    /* clip-path: polygon(0% 0%, 100% 0%, 50% 100%); */
+}
+
+/* ============================
+   4) DIMENSÕES GERAIS DO SCROLLBAR
+   ============================ */
+/* Define espessura (largura e altura) padrão de 6px */
+::-webkit-scrollbar {
+    width: 1px;
+    height: 1px;
+}
+
+/* ============================
+   5) COMPATIBILIDADE FIREFOX
+   ============================ */
+/* No Firefox, use scrollbar-color para track e thumb; 
+   porém, não há seletor nativo para setas – elas herdaram o estilo do sistema. */
+* {
+    scrollbar-width: thin;   /* “thin” equivale a ~ 8px; não controla setas */
+    scrollbar-color: var(--scrollbar-thumb-color) var(--scrollbar-track-color);
+}

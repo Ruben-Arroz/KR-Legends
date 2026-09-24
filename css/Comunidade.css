@@ -1,0 +1,415 @@
+/*--------------------------------------------------------------
+2. Tipografia e Elementos Básicos
+--------------------------------------------------------------*/
+/* Define estilos para títulos e subtítulos, proporcionando uma tipografia consistente */
+h2 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+    margin-top: 5rem;
+    color: #ffc107;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+p.subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 4rem;
+    color: #ccc;
+}
+
+/*--------------------------------------------------------------
+3. Estrutura da Galeria (Layout Principal)
+--------------------------------------------------------------*/
+/* Configura a galeria do tipo masonry para desktops, definindo colunas, espaçamento e comportamento de scroll */
+.masonry-gallery {
+    column-count: 3;
+    column-gap: 1.5rem;
+    padding: 0 1rem;
+    scroll-behavior: smooth;
+}
+
+
+
+/*--------------------------------------------------------------
+6. Botão de Ação (Call to Action)
+--------------------------------------------------------------*/
+/* Estiliza o botão de ação "Queres ser o destaque do mês?" com interações visuais */
+.action-btn {
+    display: block;
+    margin: 2rem auto 0;
+    padding: 1rem 2rem;
+    background-color: #ffc107;
+    color: #000;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 193, 7, 0.2);
+    margin-bottom: 100px;
+}
+
+.action-btn:hover {
+    background-color: #ffca2c;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 193, 7, 0.3);
+}
+
+.action-btn:active {
+    transform: translateY(-1px);
+}
+
+/*--------------------------------------------------------------
+10. Video Section
+--------------------------------------------------------------*/
+/* Estilos para a seção de vídeo, incluindo fundo, sobreposições, títulos e efeitos interativos */
+.video-section {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.8)),
+        url('https://media.discordapp.net/attachments/1043260726661357608/1361360485110382763/Capa4_original.webp?ex=67ffcac0&is=67fe7940&hm=51743be7fe7139c59b29989329a85279a9a06a33724b2b5fbcff88c3ad89c6ef&=&format=webp&width=1503&height=859') center/cover fixed;
+    padding: 6rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.video-bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, rgba(255, 193, 7, 0.1) 0%, transparent 70%);
+    pointer-events: none;
+    animation: pulse 4s ease-in-out infinite;
+}
+
+.particles-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.title-wrapper {
+    position: relative;
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.title-decoration {
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #ffc107, transparent);
+    border-radius: 2px;
+}
+
+.video-title {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+    text-shadow: 0 0 10px rgba(255, 193, 7, 0.3);
+}
+
+.video-subtitle {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+    opacity: 0;
+    animation: fadeIn 1s ease-out 0.5s forwards;
+}
+
+.highlight-text {
+    position: relative;
+    padding: 0 5px;
+}
+
+.highlight-text::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: skewX(-10deg);
+    z-index: -1;
+}
+
+.highlight-text::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #ffc107;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.highlight-text:hover::after {
+    transform: scaleX(1);
+
+}
+
+.video-wrapper {
+    position: relative;
+    z-index: 1;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    background: #000;
+    aspect-ratio: 16/9;
+    transform: perspective(1000px) rotateX(2deg);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    margin-bottom: 100px;
+}
+
+.video-container:hover {
+    transform: perspective(1000px) rotateX(0deg) translateY(-10px);
+    box-shadow: 0 20px 40px rgba(255, 193, 7, 0.2);
+}
+
+.video-glow {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    background: radial-gradient(circle at center, rgba(255, 193, 7, 0.2), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.video-container:hover .video-glow {
+    opacity: 1;
+}
+
+.video-loading-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+}
+
+.video-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.ripple {
+    position: relative;
+    overflow: hidden;
+}
+
+.ripple::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: scale(0);
+    transition: transform 0s;
+}
+
+.ripple:active::after {
+    transform: scale(2);
+    transition: transform 0.5s ease-out;
+}
+
+/*--------------------------------------------------------------
+11. Animações (Keyframes e classes auxiliares)
+--------------------------------------------------------------*/
+/* Define animações para efeitos visuais como pulse, fadeIn, slideUp e revelação de título */
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 0.1;
+    }
+
+    50% {
+        opacity: 0.2;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-title {
+    opacity: 0;
+    animation: titleReveal 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes titleReveal {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*--------------------------------------------------------------
+12. FAQ Section, Accordion e Sidebar
+--------------------------------------------------------------*/
+/* Estiliza seções adicionais como FAQ, acordeão customizado e sidebar */
+.faq-section {
+    padding: 4rem 0;
+}
+
+.faq-title {
+    color: #ffc107;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 4.9rem;
+}
+
+.accordion-item {
+    background-color: transparent;
+    border: 1px solid rgba(255, 193, 7, 0.2);
+    margin-bottom: 1rem;
+}
+
+.accordion-button {
+    background-color: rgba(26, 26, 26, 0.5);
+    color: #ffc107;
+    font-weight: 600;
+    border: none;
+    padding: 1.25rem;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: rgba(26, 26, 26, 0.8);
+    color: #ffc107;
+}
+
+.accordion-button::after {
+    filter: invert(84%) sepia(29%) saturate(4188%) hue-rotate(359deg) brightness(103%) contrast(104%);
+}
+
+.accordion-body {
+    background-color: rgba(26, 26, 26, 0.3);
+    color: #aaa;
+    padding: 1.25rem;
+}
+
+.sidebar {
+    position: sticky;
+    top: 20rem;
+}
+
+.sidebar-box {
+    background-color: rgba(26, 26, 26, 0.5);
+    border: 1px solid rgba(255, 193, 7, 0.2);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.sidebar-box h4 {
+    color: #ffc107;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.sidebar-box p {
+    color: #aaa;
+    margin-bottom: 1.25rem;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    border: none;
+    color: #000;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.btn-warning:hover {
+    background-color: #ffca2c;
+    transform: translateY(-2px);
+}
+
+/*--------------------------------------------------------------
+13. Media Queries (Responsividade)
+--------------------------------------------------------------*/
+/* Estilos responsivos para adaptar o layout em dispositivos móveis */
+@media (max-width: 768px) {
+    .video-title {
+        font-size: 2.5rem;
+    }
+}
+
+
+
+/* Espaçamento entre itens de lista nos faq */
+.accordion-body ul {
+    padding-left: 1.25rem;
+    margin: 0;
+}
+
+.accordion-body ul li {
+    margin-bottom: 0.75rem;
+}
+
+.accordion-body ul li:last-child {
+    margin-bottom: 0;
+}

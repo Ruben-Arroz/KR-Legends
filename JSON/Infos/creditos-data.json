@@ -1,0 +1,55 @@
+{
+    "desenvolvedores": [
+        {
+            "id": "ruben",
+            "nome": "Rúben Arroz",
+            "titulo": "Cofundador e Desenvolvedor",
+            "descricao": "Responsável pelo planeamento geral, com foco na organização estrutural do código, integração de componentes e desenvolvimento de sistemas modulares e escaláveis."
+        },
+        {
+            "id": "kaua",
+            "nome": "Kauã Silva",
+            "titulo": "Cofundador e Desenvolvedor",
+            "descricao": "Responsável pela arquitetura técnica do projeto e desenvolvimento de interfaces e mecânicas do KR Legends, com forte ênfase na experiência do utilizador e nas funcionalidades interativas."
+        }
+    ],
+    "instituicoes": [
+        {
+            "nome": "Escola Secundária Soares Basto",
+            "descricao": "O KR Legends teve origem num ambiente educativo que promoveu o pensamento crítico e a aplicação prática do conhecimento. A Soares Basto proporcionou os recursos, o enquadramento académico e as condições ideais para transformar ideias em soluções tecnológicas funcionais."
+        }
+    ],
+    "orientadores": [
+        {
+            "nome": "Prof. Fernando Ferreira",
+            "titulo": "Professor de API e Orientador",
+            "descricao": "Orientador atento e experiente, com contributos relevantes ao nível da qualidade técnica e coerência funcional do projeto. As suas análises e sugestões foram fundamentais para o rigor e maturidade do produto final."
+        },
+        {
+            "nome": "Prof. André Morais",
+            "titulo": "Professor de Programação",
+            "descricao": "Com uma abordagem prática e orientada a resultados, foi peça-chave na consolidação das bases de programação e na estruturação lógica do projeto. O seu acompanhamento técnico promoveu organização e clareza no desenvolvimento progressivo do KR Legends."
+        },
+        {
+            "nome": "Prof.ª Florbela Aguiar",
+            "titulo": "Professora de SIBD",
+            "descricao": "Contribuiu com uma perspetiva crítica sobre o design e organização visual do projeto. As suas sugestões foram valiosas na estruturação de documentos, relatórios e apresentações, garantindo clareza e profissionalismo na forma como comunicámos o KR Legends."
+        }
+    ],
+    "parceiros": [
+        {
+            "nome": "PRONET",
+            "descricao": "A PRONET acolheu o aluno Kauã Silva durante o estágio curricular, proporcionando um ambiente de trabalho funcional e experiências práticas que complementaram a aprendizagem técnica adquirida na escola."
+        },
+        {
+            "nome": "Globaz (LOBA)",
+            "descricao": "A colaboração com a LOBA foi decisiva para o desenvolvimento do KR Legends. Ao acolher o aluno Rúben Arroz em estágio, a empresa proporcionou um ambiente de trabalho motivador, acesso a equipamentos de elevada qualidade e apoio interdepartamental. A partilha de conhecimento e as sugestões práticas recebidas tiveram um impacto direto e significativo na evolução técnica e estética do projeto."
+        }
+    ],
+    "agradecimentos": [
+        "Aos familiares e amigos que acompanharam todo o processo, oferecendo suporte e contributos relevantes nos momentos chave da produção.",
+        "Aos colegas de turma, cujas perspetivas e sugestões ajudaram a tornar o KR Legends mais acessível e funcional.",
+        "E a todos os utilizadores-teste que participaram com feedback direto e valioso, contribuindo para a melhoria contínua e divulgação do projeto."
+    ],
+    "mensagemFinal": "Em nome de toda a equipa de desenvolvimento do KR Legends, deixamos o nosso mais sincero obrigado pelo apoio, inspiração e confiança."
+}

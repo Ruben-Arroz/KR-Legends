@@ -1,0 +1,96 @@
+{
+    "sections": [
+        {
+            "id": "origin",
+            "type": "origin",
+            "title": "Origem do Projeto",
+            "content": "O <b>KR Legends</b> nasceu de um sonho partilhado por dois alunos da escola Soares Basto – <a href='https://www.instagram.com/ruben_.rrz/' target='_blank' class='link-personalizado'>Rúben Arroz</a> e <a href='https://www.instagram.com/kaua_oaz/' target='_blank' class='link-personalizado'>Kauã Silva</a> – no âmbito do seu Projeto de Aptidão Profissional (PAP). A ideia, inicialmente batizada de <b>KR Drift Legends</b>, evoluiu rapidamente de um conceito ambicioso para um verdadeiro desafio de inovação tecnológica. Com perseverança e dedicação, a equipa ultrapassou obstáculos técnicos e criativos, transformando um simples conceito em protótipo funcional. Hoje, continuam a refinar cada detalhe, comprometidos em elevar o <b>KR Legends</b> ao estatuto de referência em corridas virtuais.",
+            "illustration": "Imagens/Random/KR_Legends_inicio.png"
+        },
+        {
+            "id": "concept",
+            "type": "concept",
+            "title": "Conceito do Jogo",
+            "background": "Imagens/Conceito/Capa.png",
+            "content": "O <b>KR Legends</b> convida-te a experimentar a essência das corridas de rua com especial ênfase no drift e na cultura JDM. Desenvolvido em Roblox Studio, oferece um mundo aberto repleto de estradas asfaltadas e trilhos de terra batida, integrados num cenário rural detalhado. Cada curva, cada derrapagem e cada desafio são projetados para proporcionar sensações intensas, equilibrando desafiantes mecânicas de condução com gráficos imersivos e uma banda sonora que eleva a adrenalina."
+        },
+        {
+            "id": "features",
+            "type": "features",
+            "title": "O que mais ele envolve?",
+            "cards": [
+                {
+                    "icon": "bi-people",
+                    "title": "Comunidade Ativa",
+                    "content": "Junte-se a uma comunidade de jogadores entusiastas, partilhe estratégias e participe em eventos exclusivos organizados pela equipa KR Legends."
+                },
+                {
+                    "icon": "bi-window-sidebar",
+                    "title": "Website",
+                    "content": "Para promover uma maior interação entre a equipa KR Legends e os jogadores, e para que todos possam informar-se sobre o projeto, decidimos criar um website com diversos propósitos."
+                },
+                {
+                    "icon": "bi-megaphone",
+                    "title": "Marketing e loja",
+                    "content": "Para promovermos o projeto e chegar aos ouvidos de todos os entusiastas, criámos redes sociais para que todos possam acompanhar as novidades. Também quisemos criar itens personalizados para os maiores fãs do KR Legends."
+                }
+            ]
+        },
+        {
+            "id": "audience",
+            "type": "audience",
+            "title": "Público-Alvo",
+            "icon": "bi-people-fill",
+            "content": "O <b>KR Legends</b> foi concebido para todos os entusiastas do automobilismo, sem limitação etária (a partir dos 5 anos). Graças à sua abordagem segura e isenta de conteúdos violentos, é ideal para famílias, jovens e jogadores casuais. Damos especial atenção a quem partilha uma paixão genuína pelas corridas — elementos como personalização de viaturas e estatísticas de performance foram desenhados a pensar na comunidade mais dedicada. O jogo também serve como plataforma educativa para os que se interessam pela cultura automóvel japonesa e pelas técnicas de drift, proporcionando um ambiente virtual seguro para aprender e apreciar esta arte."
+        },
+        {
+            "id": "potential",
+            "type": "potential",
+            "title": "Potencial do Jogo",
+            "cards": [
+                {
+                    "icon": "bi-globe",
+                    "title": "Referência Nacional e Internacional",
+                    "content": "O <b>KR Legends</b> pode tornar-se o jogo mais popular criado em Roblox Studio em Portugal. Com investimento e dedicação, alcançará o top de jogos de corridas a nível global, impulsionando a notoriedade da equipa."
+                },
+                {
+                    "icon": "bi-cash-stack",
+                    "title": "Monetização e Parcerias Estratégicas",
+                    "content": "A conversão de Robux em dinheiro real via DevEx garante rendimentos consistentes. Com passes sazonais, personalizações e parcerias, o <b>KR Legends</b> assegura monetização sustentável e progressão financeira."
+                },
+                {
+                    "icon": "bi-book",
+                    "title": "Desenvolvimento de Competências",
+                    "content": "O desenvolvimento do <b>KR Legends</b> impulsona a aprendizagem de novas ferramentas e metodologias ágeis, reforçando competências técnicas e interpessoais da equipa para futuros desafios."
+                }
+            ]
+        },
+        {
+            "id": "inspirations",
+            "type": "inspirations",
+            "title": "Inspirações",
+            "items": [
+                {
+                    "name": "Driving Empire",
+                    "image": "Imagens/Inspiracoes/Driving_Empire.webp",
+                    "link": "https://www.roblox.com/pt/games/3351674303/VW-Driving-Empire-Car-Racing"
+                },
+                {
+                    "name": "Roblox Rally Racing",
+                    "image": "Imagens/Inspiracoes/Roblox_Rally_Racing.jpeg",
+                    "link": "https://www.roblox.com/pt/games/4992570197/ROBLOX-Rally-Racing"
+                },
+                {
+                    "name": "Drift Paradise",
+                    "image": "Imagens/Inspiracoes/Drift_Paradise.jpeg",
+                    "link": "https://www.roblox.com/pt/games/2637653456/8-LIMITED-CARS-NEW-MAP-Drift-Paradise"
+                },
+                {
+                    "name": "$olitary",
+                    "image": "Imagens/Inspiracoes/Solitary.webp",
+                    "link": "https://www.roblox.com/pt/games/7763891602/olitary"
+                }
+            ]
+        }
+    ]
+}

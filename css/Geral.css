@@ -1,0 +1,653 @@
+:root {
+    --color-black: #000000;
+    --color-yellow: #ffc107;
+    --color-yellow-hover: #ffca2c;
+    --color-gray-900: #111111;
+    --color-gray-800: #1f1f1f;
+    --color-gray-700: #2d2d2d;
+    --color-gray-600: #4a4a4a;
+    --color-gray-500: #666666;
+    --color-gray-400: #888888;
+    --color-white: #ffffff;
+}
+
+/*--------------------------------------------------------------
+1. General Styles / Base
+--------------------------------------------------------------*/
+/* Este bloco normaliza os estilos básicos e remove margens e paddings padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+/* Background Gradient */
+.bg-gradient {
+    background: linear-gradient(to bottom, black, #1a1a1a, black);
+}
+
+/*--------------------------------------------------------------
+2. Header & Authentication
+--------------------------------------------------------------*/
+
+/* 1. Espaçamento entre logo e nav */
+.navbar-brand {
+    margin-right: 2.5rem;
+    /* afasta o menu da logo */
+}
+
+/* 2. Itens principais do menu */
+.navbar-nav .nav-item {
+    margin-left: 1.25rem;
+    /* ligeiro espaçamento entre cada item */
+}
+
+.navbar-nav .nav-link {
+    padding: 0.5rem 0.75rem;
+    font-weight: 600;
+    color: #ffca2c;
+    /* amarelo */
+    transition: background 0.2s, color 0.2s;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+    background: rgba(255, 193, 7, 0.1);
+    color: #fff;
+    /* texto branco ao pairar */
+    border-radius: 0.25rem;
+}
+
+/* 3. Dropdown – fundo e border seguindo a paleta */
+.dropdown-menu {
+    background-color: #000;
+    border: 1px solid #ffca2c;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+}
+
+/* 4. Itens do dropdown */
+.dropdown-item {
+    color: #ffca2c;
+    /* amarelo */
+    padding: 0.5rem 1rem;
+    transition: background 0.2s, color 0.2s;
+}
+
+.dropdown-item.d-flex:hover,
+.dropdown-item.d-flex:focus {
+    background-color: #ffc107;
+    /* item em destaque fica amarelo */
+    color: #000;
+    /* texto preto */
+}
+
+/* 5. Divider estilizado */
+.dropdown-divider {
+    border-top: 1px solid rgba(255, 193, 7, 0.3);
+    margin: 0.5rem 0;
+}
+
+/* 6. Adaptar ícones nos dropdowns */
+.dropdown-item i {
+    font-size: 1.1rem;
+    line-height: 1;
+    color: inherit;
+    /* segue a cor do item */
+}
+
+/* Auth Buttons */
+.auth-buttons {
+    display: flex;
+    gap: 0.5rem;
+    margin-left: 1.5rem;
+}
+
+.auth-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.auth-btn-login {
+    background: transparent;
+    border: 1px solid #ffc107;
+    color: #ffc107;
+}
+
+.auth-btn-login:hover {
+    background: rgba(255, 193, 7, 0.1);
+    color: #ffc107;
+    border: 1px solid #ffc107;
+}
+
+.auth-btn-register {
+    background: #ffc107;
+    border: 1px solid #ffc107;
+    color: black;
+}
+
+.auth-btn-register:hover {
+    background: #ffca2c;
+    border-color: #ffca2c;
+    color: black;
+}
+
+
+
+/* Language Selector */
+.language-selector {
+    display: flex;
+    margin-left: 1rem;
+    position: relative;
+}
+
+.language-select {
+    background: transparent;
+    border: 1px solid rgba(255, 193, 7, 0.3);
+    color: #ffc107;
+    padding: 0.5rem 2rem 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23ffc107' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 0.75rem;
+}
+
+.language-select:focus {
+    outline: none;
+    border-color: #ffc107;
+}
+
+.language-select option {
+    background: black;
+    color: #ffc107;
+    padding: 0.5rem;
+}
+
+.language-select option:hover {
+    background: #ffc107 !important;
+    color: black !important;
+}
+
+/*--------------------------------------------------------------
+3. Hero Section
+--------------------------------------------------------------*/
+#hero {
+    background-color: black;
+    padding-top: 76px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.5s ease-in-out;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.85) 0%,
+            rgba(0, 0, 0, 0.75) 50%,
+            rgba(0, 0, 0, 0.95) 100%);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/*--------------------------------------------------------------
+4. Social Links
+--------------------------------------------------------------*/
+.social-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+}
+
+.social-link {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(33, 37, 41, 0.5);
+    border-radius: 50%;
+    color: #ffc107;
+    font-size: 1.25rem;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background: #ffc107;
+    color: black;
+    transform: translateY(-5px);
+}
+
+/*--------------------------------------------------------------
+5. Carousel Navigation
+--------------------------------------------------------------*/
+.carousel-nav {
+    margin-top: 2rem;
+}
+
+.carousel-btn {
+    width: 48px;
+    height: 48px;
+    border: 2px solid rgba(255, 193, 7, 0.5);
+    background: rgba(0, 0, 0, 0.5);
+    color: #ffc107;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0.5rem;
+}
+
+.carousel-btn:hover {
+    background: #ffc107;
+    color: black;
+    transform: translateY(-2px);
+}
+
+/*--------------------------------------------------------------
+6. Animations & Keyframes
+--------------------------------------------------------------*/
+.fade-in {
+    animation: fadeIn 1s ease-out;
+}
+
+.slide-up {
+    animation: slideUp 1s ease-out;
+}
+
+.bounce {
+    animation: bounce 2s infinite;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-10px);
+    }
+
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/*--------------------------------------------------------------
+7. Responsive Adjustments
+--------------------------------------------------------------*/
+@media (max-width: 768px) {
+    .text-md-end {
+        text-align: center !important;
+    }
+
+    .navbar-collapse {
+        background-color: rgba(0, 0, 0, 0.85);
+        border-radius: 0.5rem;
+        padding: 1rem;
+        margin-top: 1rem;
+        border: 1px solid rgba(255, 193, 7, 0.2);
+    }
+
+    .navbar-nav {
+        margin-left: -27px !important;
+        padding: 1rem 0;
+        border-bottom: 1px solid rgba(81, 75, 56, 0.1);
+    }
+
+    .nav-item {
+        margin: 0.25rem 0;
+    }
+
+    .nav-link {
+        padding: 0.75rem 1rem;
+        border-radius: 0.25rem;
+    }
+
+    .nav-link:hover {
+        background-color: rgba(255, 193, 7, 0.1);
+    }
+
+    .language-selector {
+        width: 100%;
+        margin: 1rem 0;
+        text-align: center;
+    }
+
+    .language-select {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .auth-buttons {
+        width: 100%;
+        margin: 1rem 0 0 0;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+    }
+
+    .auth-btn {
+        flex: 1;
+        justify-content: center;
+        min-width: 120px;
+    }
+
+    .auth-btn-cart {
+        flex: 0 0 auto;
+        margin: 0;
+    }
+
+    .mini-cart {
+        max-width: 100%;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+@media (min-width: 1100px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl {
+        max-width: 1810px;
+    }
+}
+
+@media (max-width: 1600px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl {
+        max-width: 1410px;
+    }
+}
+
+.auth-btn-cart,
+.cart-button {
+    background: transparent;
+    color: var(--color-yellow);
+    font-size: 1.61rem;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+    margin-left: 0.5rem;
+    border: none;
+    cursor: pointer;
+}
+
+.auth-btn-cart:hover,
+.cart-button:hover {
+    transform: translateY(-2px);
+}
+
+.cart-icon-wrapper {
+    position: relative;
+    display: inline-flex;
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: var(--color-yellow);
+    color: var(--color-black);
+    font-size: 0.75rem;
+    font-weight: bold;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*--------------------------------------------------------------
+10. Overlay Styles
+    Fundo semi-transparente sob o mini carrinho
+--------------------------------------------------------------*/
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 90;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/*--------------------------------------------------------------
+11. Mini Cart Styles
+    Painel de carrinho lateral com itens, subtotal e controles
+--------------------------------------------------------------*/
+.mini-cart {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 100%;
+    max-width: 400px;
+    height: 100vh;
+    background: var(--color-gray-900);
+    border-left: 1px solid var(--color-gray-700);
+    z-index: 100;
+    transition: right 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    padding-top: 90px;
+}
+
+.mini-cart.active {
+    right: 0;
+}
+
+.mini-cart-header {
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--color-gray-700);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mini-cart-header h3 {
+    color: var(--color-yellow);
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+.mini-cart-close {
+    background: transparent;
+    border: none;
+    color: var(--color-gray-400);
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: color 0.3s;
+}
+
+.mini-cart-close:hover {
+    color: var(--color-yellow);
+}
+
+.mini-cart-items {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1.5rem;
+}
+
+.mini-cart-item {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--color-gray-700);
+}
+
+.mini-cart-item-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 0.25rem;
+}
+
+.mini-cart-item-info {
+    flex: 1;
+}
+
+.mini-cart-item-title {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.mini-cart-item-price {
+    color: var(--color-yellow);
+    font-weight: 600;
+}
+
+.mini-cart-item-quantity {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.quantity-btn {
+    background: var(--color-gray-800);
+    border: none;
+    color: var(--color-white);
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.quantity-btn:hover {
+    background: var(--color-gray-700);
+}
+
+.mini-cart-footer {
+    padding: 1.5rem;
+    border-top: 1px solid var(--color-gray-700);
+}
+
+.mini-cart-subtotal {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.mini-cart-subtotal span:last-child {
+    color: var(--color-yellow);
+}
+
+.btn-outline {
+    border: 1px solid var(--color-yellow);
+    color: var(--color-yellow);
+    background: transparent;
+}
+
+.btn-outline:hover {
+    background: rgba(255, 193, 7, 0.1);
+}
+
+.btn-primary {
+    background: var(--color-yellow);
+    color: var(--color-black);
+    border: 1px solid var(--color-yellow);
+}
+
+.btn-primary:hover {
+    background: var(--color-yellow-hover);
+    border-color: var(--color-yellow-hover);
+    color: var(--color-black);
+}
+
+.btn-block {
+    width: 100%;
+    display: block;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+/*--------------------------------------------------------------
+4. Header & Navigation Toggles
+   Estilos para botão de menu responsivo e ícones associados
+--------------------------------------------------------------*/
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--color-yellow);
+    cursor: pointer;
+}
